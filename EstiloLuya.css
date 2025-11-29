@@ -1,0 +1,166 @@
+BODY
+{
+ SCROLLBAR-FACE-COLOR: #AAA9A9; 
+ SCROLLBAR-HIGHLIGHT-COLOR: #FFFFFF; 
+ SCROLLBAR-SHADOW-COLOR: #000000; 
+ SCROLLBAR-3DLIGHT-COLOR: #AAA9A9; 
+ SCROLLBAR-ARROW-COLOR: #FFFFFF; 
+ SCROLLBAR-TRACK-COLOR: #CCCCCC;
+}
+.clsFecha
+{
+	FONT-WEIGHT: bold; 
+	FONT-SIZE: 7pt;
+	COLOR:#FFFFFF;
+	FONT-FAMILY:VERDANA
+}
+
+.clsMarquesina
+{
+    FONT-SIZE: 8pt;
+	FONT-WEIGHT: bold; 	
+    COLOR: #000000;
+    FONT-FAMILY: Verdana
+}
+.clsParrofo
+{
+    FONT-SIZE: 8pt;
+    COLOR: #000000;
+    FONT-FAMILY: Verdana
+}
+.clsLink 
+{
+	FONT-SIZE: 7pt; 
+	FONT-WEIGHT: bold; 
+	COLOR:#ffcc33;
+	FONT-FAMILY: VERDANA; 
+	TEXT-DECORATION: NONE
+}
+.clsLink:visited
+{
+	FONT-SIZE: 7pt; 
+	FONT-WEIGHT: bold; 
+	COLOR:#ffcc33;
+	FONT-FAMILY: Verdana; 
+	TEXT-DECORATION: NONE
+}
+
+.clsLink:hover
+{
+	FONT-SIZE: 7pt; 
+	COLOR:#ffcc33;
+	FONT-WEIGHT: bold; 
+	FONT-FAMILY: Verdana; 
+	TEXT-DECORATION: UNDERLINE
+}
+
+.clsLink1 
+{
+	FONT-SIZE: 7pt; 
+	FONT-WEIGHT: bold; 
+	COLOR:#009900;
+	FONT-FAMILY: VERDANA; 
+	TEXT-DECORATION: NONE
+}
+.clsLink1:visited
+{
+	FONT-SIZE: 7pt; 
+	FONT-WEIGHT: bold; 
+	COLOR:#009900;
+	FONT-FAMILY: Verdana; 
+	TEXT-DECORATION: NONE
+}
+.clsLink1:hover
+{
+	FONT-SIZE: 7pt; 
+	COLOR:#009900;
+	FONT-WEIGHT: bold; 
+	FONT-FAMILY: Verdana; 
+	TEXT-DECORATION: UNDERLINE
+}
+
+.clsLink2 
+{
+	FONT-SIZE: 8pt; 
+	FONT-WEIGHT: bold; 
+	COLOR:#993300;
+	FONT-FAMILY: VERDANA; 
+	TEXT-DECORATION: UNDERLINE
+}
+.clsLink2:visited
+{
+	FONT-SIZE: 8pt; 
+	FONT-WEIGHT: bold; 
+	COLOR:#993300;
+	FONT-FAMILY: Verdana; 
+	TEXT-DECORATION: UNDERLINE
+}
+.clsLink2:hover
+{
+	FONT-SIZE:8pt; 
+	COLOR:#993300;
+	FONT-WEIGHT: bold; 
+	FONT-FAMILY: Verdana; 
+	TEXT-DECORATION: UNDERLINE
+}
+
+.clsContenido
+{
+    FONT-SIZE: 8pt;
+    COLOR: #000000;
+    FONT-FAMILY: Verdana
+}
+
+.clsTitulo
+{
+	FONT-SIZE: 9pt; 
+	FONT-WEIGHT: bold; 
+	COLOR:#993300;
+	FONT-FAMILY: VERDANA; 
+}
+.clsTitulo1
+{
+	FONT-SIZE: 9pt; 
+	FONT-WEIGHT: bold; 
+	COLOR:#000000;
+	FONT-FAMILY: VERDANA; 
+}
+
+.clsSubtitulo
+{
+	FONT-SIZE: 8pt; 
+	FONT-WEIGHT: bold; 
+	COLOR:#0066CC;
+	FONT-FAMILY: VERDANA; 
+}
+
+.clsCelda
+{
+	FONT-SIZE: 8pt; 
+	FONT-WEIGHT: bold; 
+	COLOR:#FFFFFF;
+	FONT-FAMILY: VERDANA; 
+	background-color: #336699;
+}
+.clsCeldaContenido
+{
+	FONT-SIZE: 7pt; 
+	FONT-WEIGHT:500; 
+	COLOR:#000000;
+	FONT-FAMILY: VERDANA; 
+}
+
+.clsCeldaOn
+{
+	FONT-SIZE:8pt;
+	COLOR:#FFFFFF;
+	FONT-FAMILY:VERDANA;
+	BACKGROUND-COLOR: #006600;	
+}
+.clsCeldaOff
+{
+	FONT-SIZE:8pt;
+	COLOR:#FFFFFF;
+	FONT-FAMILY:VERDANA;
+	BACKGROUND-COLOR: #009900;	
+}

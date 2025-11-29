@@ -1,0 +1,83 @@
+<html>
+<head>
+<title>..::..Municipalidad Provincial de Luya..::..</title>
+<script language="JavaScript">
+function FechaActual()
+{
+	var mydate=new Date()
+	var year=mydate.getYear()
+	if (year < 1000)
+		year+=1900
+	var day=mydate.getDay()
+	var month=mydate.getMonth()
+	var daym=mydate.getDate()
+	if (daym<10)
+		daym="0" + daym
+	var dayarray=new Array("Domingo","Lunes","Martes","Miercoles","Jueves","Viernes","Sabado")
+	var montharray=new Array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre")
+	document.write("Luya, " + dayarray[day] + " " + daym + " de " + montharray[month])// + " de " + year
+}
+</script>
+</head>
+<link href="EstiloLuya.css" rel="stylesheet" type="text/css">
+<body bgcolor="#AAA9A9" marginheight="0" leftmargin="0" marginwidth="0" rightmargin="0" topmargin="0">
+<table  border="0" width="100%" height="100%" cellpadding="0" cellspacing="0" align="center">
+<tr>
+	<td align="center" width="100%" height="19%" valign="top">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+	<td rowspan="2" width="10%" valign="top"><img src="imagenes/img11.jpg"></td>
+	<td height="69" width="490" valign="top">
+		<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+		  codebase="http://active.macromedia.com/flash4/cabs/swflash.cab#version=4,0,0,0"
+		  id="banner" width="650" height="69">
+		  <param name="movie" value="banner.swf">
+		  <param name="quality" value="high">
+		  <param name="bgcolor" value="#BBBBBB">
+		  <embed name="banner" src="banner.swf" quality="high" bgcolor="#BBBBBB"
+			width="650" height="69"
+			type="application/x-shockwave-flash"
+			pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash">
+		  </embed>
+		</object>
+	</td>
+	<td background="imagenes/img5.jpg">&nbsp;</td>
+</tr>
+<tr>
+	<td colspan="3"><table  border="0" width="100%" cellpadding="0" cellspacing="0">
+		<tr>
+			<td width="160"  height="31" background="imagenes/img3.jpg" valign="middle">&nbsp;&nbsp;&nbsp;&nbsp;<a class="clsLink"  href="presentacion.htm" target="ventana">Presentaci&oacute;n »</a></td>
+			<td align="center" background="imagenes/img4.jpg">
+			<table border="0" cellpadding="0" cellspacing="0" width="80%" height="100%">
+				<tr>
+					<td align="left" valign="middle" width="65%" class="clsMarquesina">&nbsp;<marquee direction="LEFT">Bienvenidos a la Web Oficial de la Municipalidad de Luya....Capital Arqueol&oacute;gica del Nor Oriente Peruano</MARQUEE></td>
+				</tr>
+			</table>
+			</td>					
+		</tr>				
+		</table>	
+	</td>
+</tr>
+<tr>
+	<td colspan="3">	
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tr bgcolor="#000000">
+			<td align="left" class="clsParrofo" width="20%">&nbsp;<a href="mapa.htm" class="clsLink" target="ventana">Mapa del Sitio » </a></td>
+			<td align="center"><script src="xaramenu.js"></script><script src="boton.js"></script></td>
+			<td align="right" class="clsFecha"><script>FechaActual()</script>&nbsp;</td>
+	    </tr>
+	</table>
+	</td>
+</tr>
+</table>
+	</td>
+</tr>
+<tr>
+	<td valign="top" width="100%" height="100%">
+	<iframe align="top" frameborder="0" name="ventana" width="100%" height="100%"src="presentacion.htm"></iframe></td>
+	</td>
+</tr>
+</table>
+
+</body>
+</html>
