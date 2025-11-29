@@ -1,60 +1,110 @@
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
-<title>Obras Luya</title>
-<script language="JavaScript">
-function VentanaFlotante(pag,ancho,alto)
-{
-NuevaVentana = window.open(pag,"_blank","bar=0,toolbar=0,location=0,directories=0,status=0,menubar=0,scrollbars=0,resizable=0,width="+ ancho +",height="+ alto +",top=50,left=20");
-}
-</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obras Luya</title>
+    <link href="EstiloLuya.css" rel="stylesheet" type="text/css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #FFFFFF;
+            margin: 0;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        header {
+            background-color: #FFFFFF;
+            text-align: center;
+            padding: 16px;
+        }
+        header img {
+            max-width: 100%;
+            height: auto;
+        }
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 16px auto;
+            padding: 16px;
+        }
+        nav.sidebar {
+            flex: 1 1 210px;
+            text-align: center;
+        }
+        nav.sidebar img {
+            max-width: 100%;
+            height: auto;
+        }
+        section.gallery {
+            flex: 3 1 600px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 10px;
+            margin-top: 16px;
+        }
+        section.gallery a {
+            display: block;
+        }
+        section.gallery img {
+            width: 100%;
+            height: auto;
+            border: 0;
+        }
+        footer {
+            text-align: center;
+            padding: 16px 8px;
+            font-size: 0.85rem;
+        }
+        @media (max-width: 768px) {
+            main {
+                flex-direction: column;
+                margin: 8px;
+                padding: 12px;
+            }
+            nav.sidebar {
+                margin-bottom: 16px;
+            }
+        }
+    </style>
 </head>
-<link href="EstiloLuya.css" rel="stylesheet" type="text/css">
-<body bgcolor="#FFFFFF" leftmargin="0" marginheight="0" marginwidth="0" rightmargin="0" topmargin="0">
-<table border="0" width="100%" cellpadding="0" cellspacing="0">
-	<tr valign="top">
-		<td width="210"><img src="imagenes/casona.jpg" border="0"></td>
-		<td valign="top" align="left">
-			<table border="0" cellspacing="2" cellpadding="2" align="left">
-				<tr>
-					<td height="35" align="left" colspan="3"><img src="imagenes/titulo3.jpg" border="0"></td>
-				</tr>
-			<tr> 
-				<td align="center"><a href=javascript:VentanaFlotante('imagenes/Afirmado_camino_02.jpg',585,380)><img src="imagenes/Afirmado_camino_02_miniatura.jpg" width="160" height="118" border="0"></a></td>
-				<td align="center"><a href=javascript:VentanaFlotante('imagenes/Afirmado_camino.jpg',896,587)><img src="imagenes/Afirmado_camino_miniatura.jpg" width="160" height="118" border="0"></a></td>
-				<td align="center"><a href=javascript:VentanaFlotante('imagenes/Camino_02.jpg',844,526)><img src="imagenes/Camino_02_miniatura.jpg" width="160" height="118" border="0"></a></td>
-			</tr>
-			<tr> 
-				<td align="center"><a href=javascript:VentanaFlotante('imagenes/Camino_03.jpg',896,581)><img src="imagenes/Camino_03_miniatura.jpg" width="160" height="118" border="0"></a></td>
-				<td align="center"><a href=javascript:VentanaFlotante('imagenes/Camino_04.jpg',889,548)><img src="imagenes/Camino_04_miniatura.jpg" width="160" height="118" border="0"></a></div></td>
-				<td align="center"><a href=javascript:VentanaFlotante('imagenes/Camino_05.jpg',891,582)><img src="imagenes/Camino_05_miniatura.jpg" width="160" height="118" border="0"></a></div></td>
-			</tr>
-			<tr>
-				<td align="center"><a href=javascript:VentanaFlotante('imagenes/Refaccion_calles.jpg',850,532)><img src="imagenes/Refaccion_calles_miniatura.jpg" width="160" height="118" border="0"></a></div></td>
-				<td align="center"><a href=javascript:VentanaFlotante('imagenes/Redes_Riego_02.jpg',902,578)><img src="imagenes/Redes_Riego_02_miniatura.jpg" width="160" height="118" border="0"></a></div></td>
-				<td align="center"><a href=javascript:VentanaFlotante('imagenes/Redes_Riego.jpg',880,564)><img src="imagenes/Redes_Riego_miniatura.jpg" width="160" height="118" border="0"></a></div></td>
-			</tr>
-			<tr> 
-				<td align="center"><a href=javascript:VentanaFlotante('imagenes/Camino_08.jpg',844,522)><img src="imagenes/Camino_08_miniatura.jpg" width="160" height="118" border="0"></a></div></td>
-				<td align="center"><a href=javascript:VentanaFlotante('imagenes/Camino_09.jpg',857,528)><img src="imagenes/Camino_09_miniatura.jpg" width="160" height="118" border="0"></a></div></td>
-				<td align="center"><a href=javascript:VentanaFlotante('imagenes/Camino.jpg',888,564)><img src="imagenes/Camino_miniatura.jpg" width="160" height="118" border="0"></a></div></td>
-			</tr>
-			<tr> 
-				<td align="center"><a href=javascript:VentanaFlotante('imagenes/Camino_y_Riego.jpg',893,569)><img src="imagenes/Camino_y_Riego_miniatura.jpg" width="160" height="118" border="0"></a></div></td>
-				<td align="center"><a href=javascript:VentanaFlotante('imagenes/Cerco_piedras.jpg',883,569)><img src="imagenes/Cerco_piedras_miniatura.jpg" width="160" height="118" border="0"></a></div></td>
-				<td align="center"><a href=javascript:VentanaFlotante('imagenes/Lamud_Obras.jpg',890,588)><img src="imagenes/Lamud_Obras_miniatura.jpg" width="160" height="118" border="0"></a></div></td>
-			</tr>
-			<tr>
-				<td align="center"><a href=javascript:VentanaFlotante('imagenes/Lamud_Pueblo.jpg',860,534)><img src="imagenes/Lamud_Pueblo_miniatura.jpg" width="160" height="118" border="0"></a></div></td>
-				<td align="center"><a href=javascript:VentanaFlotante('imagenes/Camino_06.jpg',577,888)><img src="imagenes/Camino_06_miniatura.jpg" width="85" height="118" border="0"></a></div></td>
-				<td align="center"><a href=javascript:VentanaFlotante('imagenes/Camino_07.jpg',522,841)><img src="imagenes/Camino_07_miniatura.jpg" width="83" height="118" border="0"></a></div></td>
-			</tr>
-			<tr> 
-				<td align="center" colspan="3"><a <a href=javascript:VentanaFlotante('imagenes/Refaccion_calles_02.jpg',892,570)><img src="imagenes/Refaccion_calles_02_miniatura.jpg" width="160" height="118" border="0"></a></td>
-			</tr>
-			</table>
-		
-		</td>		
-	</tr>
-</table>
+<body>
+    <header>
+        <img src="imagenes/titulo3.jpg" alt="Título Obras Luya">
+    </header>
+
+    <main>
+        <nav class="sidebar" aria-label="Imagen decorativa">
+            <img src="imagenes/casona.jpg" alt="Casona">
+        </nav>
+
+        <section class="gallery" aria-label="Galería de obras">
+            <a href="imagenes/Afirmado_camino_02.jpg" target="_blank"><img src="imagenes/Afirmado_camino_02_miniatura.jpg" alt="Afirmado camino 02"></a>
+            <a href="imagenes/Afirmado_camino.jpg" target="_blank"><img src="imagenes/Afirmado_camino_miniatura.jpg" alt="Afirmado camino"></a>
+            <a href="imagenes/Camino_02.jpg" target="_blank"><img src="imagenes/Camino_02_miniatura.jpg" alt="Camino 02"></a>
+            <a href="imagenes/Camino_03.jpg" target="_blank"><img src="imagenes/Camino_03_miniatura.jpg" alt="Camino 03"></a>
+            <a href="imagenes/Camino_04.jpg" target="_blank"><img src="imagenes/Camino_04_miniatura.jpg" alt="Camino 04"></a>
+            <a href="imagenes/Camino_05.jpg" target="_blank"><img src="imagenes/Camino_05_miniatura.jpg" alt="Camino 05"></a>
+            <a href="imagenes/Refaccion_calles.jpg" target="_blank"><img src="imagenes/Refaccion_calles_miniatura.jpg" alt="Refacon calles"></a>
+            <a href="imagenes/Redes_Riego_02.jpg" target="_blank"><img src="imagenes/Redes_Riego_02_miniatura.jpg" alt="Redes riego 02"></a>
+            <a href="imagenes/Redes_Riego.jpg" target="_blank"><img src="imagenes/Redes_Riego_miniatura.jpg" alt="Redes riego"></a>
+            <a href="imagenes/Camino_08.jpg" target="_blank"><img src="imagenes/Camino_08_miniatura.jpg" alt="Camino 08"></a>
+            <a href="imagenes/Camino_09.jpg" target="_blank"><img src="imagenes/Camino_09_miniatura.jpg" alt="Camino 09"></a>
+            <a href="imagenes/Camino.jpg" target="_blank"><img src="imagenes/Camino_miniatura.jpg" alt="Camino"></a>
+            <a href="imagenes/Camino_y_Riego.jpg" target="_blank"><img src="imagenes/Camino_y_Riego_miniatura.jpg" alt="Camino y riego"></a>
+            <a href="imagenes/Cerco_piedras.jpg" target="_blank"><img src="imagenes/Cerco_piedras_miniatura.jpg" alt="Cerco piedras"></a>
+            <a href="imagenes/Lamud_Obras.jpg" target="_blank"><img src="imagenes/Lamud_Obras_miniatura.jpg" alt="Lamud obras"></a>
+            <a href="imagenes/Lamud_Pueblo.jpg" target="_blank"><img src="imagenes/Lamud_Pueblo_miniatura.jpg" alt="Lamud pueblo"></a>
+            <a href="imagenes/Camino_06.jpg" target="_blank"><img src="imagenes/Camino_06_miniatura.jpg" alt="Camino 06"></a>
+            <a href="imagenes/Camino_07.jpg" target="_blank"><img src="imagenes/Camino_07_miniatura.jpg" alt="Camino 07"></a>
+            <a href="imagenes/Refaccion_calles_02.jpg" target="_blank"><img src="imagenes/Refaccion_calles_02_miniatura.jpg" alt="Refacon calles 02"></a>
+        </section>
+    </main>
+
+    <footer>
+        <small>© 2025 Municipalidad Provincial. Todos los derechos reservados.</small>
+    </footer>
 </body>
 </html>

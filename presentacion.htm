@@ -1,158 +1,60 @@
-<html>
-<head><title>Presentación</title>
-<script language="JavaScript">
-
-
-var slideShowSpeed = 5000;
-var crossFadeDuration = 3;
-var slideShowSpeed1 = 5000;
-var crossFadeDuration1 = 3;
-var t;
-var t1;
-var x = 0;
-var y = 0;
-
-var Pic = new Array();
-var PicUno = new Array();
-
-Pic[0] = 'imagenes/tira1.jpg'
-Pic[1] = 'imagenes/tira2.jpg'
-Pic[2] = 'imagenes/tira3.jpg'
-Pic[3] = 'imagenes/tira4.jpg'
-
-
-PicUno[0] = 'imagenes/tira5.jpg'
-PicUno[1] = 'imagenes/tira6.jpg'
-PicUno[2] = 'imagenes/tira7.jpg'
-PicUno[3] = 'imagenes/tira8.jpg'
-PicUno[4] = 'imagenes/tira9.jpg'
-
-var p = Pic.length;
-var pUno = PicUno.length;
-
-var preLoad = new Array();
-for (i = 0; i < p; i++) 
-{
-	preLoad[i] = new Image();
-	preLoad[i].src = Pic[i];
-}
-
-var OtroArreglo = new Array();
-for (j = 0; j < pUno; j++) 
-{
-	OtroArreglo[j] = new Image();
-	OtroArreglo[j].src = PicUno[j];
-}
-
-function runSlideShow() 
-{
-	if (document.all) 
-	{
-		document.images.SlideShow.style.filter="blendTrans(duration=2)";
-		document.images.SlideShow.style.filter="blendTrans(duration=crossFadeDuration)";
-		document.images.SlideShow.filters.blendTrans.Apply();
-	}
-	document.images.SlideShow.src = preLoad[x].src;
-	if (document.all) 
-	{
-		document.images.SlideShow.filters.blendTrans.Play();
-	}
-	x = x + 1;
-	if (x > (p - 1)) 
-		x = 0;
-	t = setTimeout('runSlideShow()', slideShowSpeed);
-}
-
-function runSlideShow1() 
-{
-	if (document.all) 
-	{
-		document.images.SlideShow1.style.filter="blendTrans(duration=2)";
-		document.images.SlideShow1.style.filter="blendTrans(duration=crossFadeDuration1)";
-		document.images.SlideShow1.filters.blendTrans.Apply();
-	}
-	document.images.SlideShow1.src = OtroArreglo[y].src;
-	if (document.all) 
-	{
-		document.images.SlideShow1.filters.blendTrans.Play();
-	}
-	y = y + 1;
-	if (y > (pUno - 1)) 
-		y = 0;
-	t1 = setTimeout('runSlideShow1()', slideShowSpeed1);
-}
-
-function CargarFlash()
-{
-	window.defaultStatus='»» Municipalidad de luya ««';
-	runSlideShow()
-	runSlideShow1()
-
-}
-</script>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>PresentaciÃ³n - Municipalidad de Luya</title>
 </head>
-<link href="EstiloLuya.css" rel="stylesheet" type="text/css">
-<body bgcolor="#A9AAAA" leftmargin="0" marginheight="0" marginwidth="0" rightmargin="0" topmargin="0" onLoad="CargarFlash()"> 
-<table border="0" height="100%" width="100%" cellpadding="0" cellspacing="0">
-<tr>
-	<td width="12%" align="center" valign="top" id="VU1" bgcolor="#AAA9A9">
-	<img src="imagenes/tira1.jpg" name="SlideShow">
-	</td>
-	<td valign="top">
-	<table border="0" height="100%" width="100%" cellpadding="0" cellspacing="3" align="center" bgcolor="#FFFFFF">
-	<tr>
-		<td height="35" align="center"><br><img src="imagenes/titulo.jpg" border="0"></td>
-	</tr>
-	<tr>
-		<td align="justify" class="clsContenido" valign="top">
-		<br>
-		La Provincia de Luya, nombre que significa “Alegría”, se halla en la parte meridional del 
-		Departamento de Amazonas, abarcando un gran sector de la sierra, detrás de la Cordillera 
-		Occidental de los Andes del Perú.
-		<br><br>
-		Limita por el Norte, con la Provincia de Bagua; por el Este, con el Río Utcubamba, que lo 
-		separa de la Provincia de Chachapoyas; por el Sur, con la misma Provincia de Chachapoyas; 
-		y por el Oeste con el río Marañón, que lo divide de la Provincia de Celendín. <br>
-		Se halla cruzada por grandes ramales de las Cordilleras Central y Oriental de los Andes, 
-		siendo sus tierras escarpadas, con profundas quebradas, elevadas mesetas y cumbres coronadas de nívea blancura.<br>
-		Está bañada por dos caudalosos ríos: el Marañón, que naciendo en la Laguna de Huaihuash, al 
-		norte del Nudo de Pasco, atraviesa en su curso separando a esta Provincia de Celendín y 
-		fertilizando los valles de Tupén, Mendán, Quisquis, Soscómal, Hóndul, etc. El río Utcubmaba en 
-		su curso impetuoso va también fertilizando otros valles de menor extensión, como Lopecancha, 
-		Cuchulia y otros. Fuera de estos ríos hay otros de menor caudal y que sirven de tributarios de 
-		los anteriores.<br>
-		Tiene la maravilla de poseer todos los climas del mundo, desde los más fríos, los templados, 
-		hasta los más calientes de las profundas quebradas. Las lluvias son abundantes casi todo el año, 
-		pero tienen una etapa de verano, de Junio a Setiembre, con un clima primaveral, muy recomendado 
-		para los enfermos del pulmón. Durante todo el año los vientos son suaves y tranquilos, no 				habiéndose registrado en ninguna época vientos huracanados que hayan ocasionados daños a las 		poblaciones y sembríos.
-		</td>
-	</tr>
-	<tr>
-		<td>&nbsp;</td>
-	</tr>
-	<tr>
-		<td><hr color="#000000"></td>
-	</tr>
-	<tr>
-		<td align="center"><MARQUEE direction="left" height="70" onmouseout="this.start()" onmouseover="this.stop()" scrollAmount="2" scrollDelay="10" width="80%">
-		<table border="0" cellpadding="5" cellspacing="5">
-		<tr>
-			<td align="center"><a href="http://www.perugobierno.gob.pe" target="_blank"><img src="imagenes/perugobierno.gif" alt="Portal del Estado Peruano" border="0"></a></td>
-			<td align="center"><a href="http://www.mivivienda.com.pe" target="_blank"><img src="imagenes/mivivienda.gif" alt="Fondo Mi Vivienda" border="0"></a></td>
-			<td align="center"><a href="http://www.transparencia-economica.mef.gob.pe" target="_blank"><img src="imagenes/gtransparencia.gif" alt="Transparencia Econ&oacute;mica del Ministerio de Econom&iacute;a 	del Per&uacute;" border="0"></a></td>
-			<td align="center"><a href="http://www.mef.gob.pe" target="_blank"><img src="imagenes/b_mef.gif" alt="Ministerio de Econom&iacute;a y Finanzas" border="0"></a></td>
-			<td align="center"><a href="http://www.acuerdonacional.gob.pe" target="_blank"><img src="imagenes/acuerdonac.jpg" alt="Acuerdo Nacional" border="0"></a></td>
-			<td align="center"><a href="http://www.prompyme.gob.pe" target="_blank"><img src="imagenes/b_prompyme.gif" alt="Promoci&oacute;n de la Peque&ntilde;a y Mediana Empresa" border="0"></a></td>
-			<td align="center"><a href="http://www.editoraperu.com.pe" target="_blank"><img src="imagenes/elperuano.gif" alt="Diario Oficial el Peruano" border="0"></a></td>
-		</tr>
-	</table>
-	</marquee>
-</td>
-	</tr>
-	</table>
-	</td>
-	<td width="12%" align="center" valign="top" id="VU1" bgcolor="#AAA9A9"><img src="imagenes/tira4.jpg" name="SlideShow1"></td>
-</tr>
-</table>
+<body>
+    <table border="0" width="100%" cellpadding="0" cellspacing="0">
+        <tr valign="top">
+            <td width="12%" align="center" valign="top">
+                <img src="imagenes/tira1.jpg" alt="Imagen 1">
+                <img src="imagenes/tira2.jpg" alt="Imagen 2">
+                <img src="imagenes/tira3.jpg" alt="Imagen 3">
+                <img src="imagenes/tira4.jpg" alt="Imagen 4">
+            </td>
+            <td valign="top">
+                <table border="0" width="100%" cellpadding="0" cellspacing="3" align="center">
+                    <tr>
+                        <td height="35" align="center">
+                            <img src="imagenes/titulo.jpg" alt="TÃ­tulo">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="justify">
+                            La Provincia de Luya, nombre que significa "alegrÃ­a", se halla en la parte meridional del Departamento de Amazonas, abarcando un gran sector de la sierra, detrÃ¡s de la Cordillera Occidental de los Andes del PerÃº.
+                            <br><br>
+                            Limita por el Norte, con la Provincia de Bagua; por el Este, con el RÃ­o Utcubamba, que lo separa de la Provincia de Chachapoyas; por el Sur, con la misma Provincia de Chachapoyas; y por el Oeste con el rÃ­o MaraÃ±Ã³n, que lo divide de la Provincia de CelendÃ­n. Se halla cruzada por grandes ramales de las Cordilleras Central y Oriental de los Andes, siendo sus tierras escarpadas, con profundas quebradas, elevadas mesetas y cumbres coronadas de nieve blancura.
+                            <br><br>
+                            EstÃ¡ baÃ±ada por dos caudalosos rÃ­os: el MaraÃ±Ã³n, que naciendo en la Laguna de Huaihuash, al norte del Nudo de Pasco, atraviesa en su curso separando a esta Provincia de CelendÃ­n y fertilizando los valles de TupÃ©n, MendÃ©n, Quisquis, SoscÃ©mal, HÃ³ndul, etc. El rÃ­o Utcubamba en su curso impetuoso va tambiÃ©n fertilizando otros valles de menor extensiÃ³n, como Lopecancha, Cuchulia y otros. Fuera de estos rÃ­os hay otros de menor caudal y que sirven de tributarios de los anteriores.
+                            <br><br>
+                            Tiene la maravilla de poseer todos los climas del mundo, desde los mÃ¡s frÃ­os, los templados, hasta los mÃ¡s calientes de las profundas quebradas. Las lluvias son abundantes casi todo el aÃ±o, pero tienen una etapa de verano, de Junio a Setiembre, con un clima primaveral, muy recomendado para los enfermos del pulmÃ³n. Durante todo el aÃ±o los vientos son suaves y tranquilos, no habiÃ©ndose registrado en ninguna Ã©poca vientos huracanados que hayan ocasionado daÃ±os a las poblaciones y sembrÃ­os.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <hr>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <marquee direction="left" height="70" scrollamount="2" scrolldelay="10" width="80%">
+                                <table border="0" cellpadding="5" cellspacing="5">
+                                    <tr>
+                                        <td align="center"><a href="http://www.perugobierno.gob.pe" target="_blank"><img src="imagenes/perugobierno.gif" alt="Portal del Estado Peruano" border="0"></a></td>
+                                        <td align="center"><a href="http://www.mivivienda.com.pe" target="_blank"><img src="imagenes/mivivienda.gif" alt="Fondo Mi Vivienda" border="0"></a></td>
+                                        <td align="center"><a href="http://www.transparencia-economica.mef.gob.pe" target="_blank"><img src="imagenes/gtransparencia.gif" alt="Transparencia EconÃ³mica del Ministerio de EconomÃ­a del PerÃº" border="0"></a></td>
+                                        <td align="center"><a href="http://www.mef.gob.pe" target="_blank"><img src="imagenes/b_mef.gif" alt="Ministerio de EconomÃ­a y Finanzas" border="0"></a></td>
+                                        <td align="center"><a href="http://www.acuerdonacional.gob.pe" target="_blank"><img src="imagenes/acuerdonac.jpg" alt="Acuerdo Nacional" border="0"></a></td>
+                                        <td align="center"><a href="http://www.prompyme.gob.pe" target="_blank"><img src="imagenes/b_prompyme.gif" alt="PromociÃ³n de la PequeÃ±a y Mediana Empresa" border="0"></a></td>
+                                        <td align="center"><a href="http://www.editoraperu.com.pe" target="_blank"><img src="imagenes/elperuano.gif" alt="Diario Oficial El Peruano" border="0"></a></td>
+                                    </tr>
+                                </table>
+                            </marquee>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
 </body>
 </html>
