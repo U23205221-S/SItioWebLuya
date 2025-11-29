@@ -1,1018 +1,619 @@
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
-<title>Distritos</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distritos - Municipalidad Provincial</title>
+    <link href="EstiloLuya.css" rel="stylesheet" type="text/css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #A9AAAA;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+        header {
+            background-color: #FFFEF2;
+            text-align: center;
+            padding: 16px;
+            border-bottom: 2px solid #006600;
+        }
+        header img {
+            max-width: 100%;
+            height: auto;
+        }
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 16px auto;
+            background-color: #FFFEF2;
+            padding: 16px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        nav.sidebar {
+            flex: 1 1 220px;
+            background-color: #DDE1DE;
+            padding: 12px;
+            margin-right: 16px;
+            border-radius: 6px;
+            text-align: center;
+        }
+        nav.sidebar img {
+            max-width: 100%;
+            margin-bottom: 10px;
+            border-radius: 4px;
+        }
+        section.content {
+            flex: 3 1 600px;
+        }
+        h2.section-title {
+            color: #006600;
+            border-bottom: 3px solid #006600;
+            padding-bottom: 5px;
+            margin-top: 24px;
+        }
+        .section {
+            margin-bottom: 24px;
+        }
+        .section ul {
+            list-style: none;
+            padding: 0;
+        }
+        .section ul li {
+            margin: 8px 0;
+        }
+        .section ul li a {
+            color: #000000;
+            text-decoration: none;
+        }
+        .section ul li a:hover {
+            text-decoration: underline;
+        }
+        .section p {
+            line-height: 1.5;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        table th,
+        table td {
+            padding: 8px 12px;
+            border-bottom: 1px solid #ccc;
+            text-align: left;
+        }
+        table th {
+            background-color: #E6F0E6;
+            font-weight: bold;
+        }
+        footer {
+            text-align: center;
+            padding: 16px 8px;
+            background-color: #FFFEF2;
+            border-top: 2px solid #006600;
+            font-size: 0.85rem;
+        }
+        @media (max-width: 768px) {
+            main {
+                flex-direction: column;
+                margin: 8px;
+                padding: 12px;
+            }
+            nav.sidebar {
+                margin-right: 0;
+                margin-bottom: 16px;
+                width: 100%;
+            }
+            section.content {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
-<link href="./EstiloLuya.css" rel="stylesheet" type="text/css">
-<body bgcolor="#FFFFFF" leftmargin="0" marginheight="0" marginwidth="0" rightmargin="0" topmargin="0">
-<a name="iniciopagina"></a>
-<table width="100%" height="0%" border="0" cellspacing="0">
-  <tr valign="top"> 
-    <td bgcolor="#000000"> 
-		<table width="0%" border="0">
-        <tr> 
-          <td>
-		  <font color="#FFFFFF" size="2" face="Verdana, Arial, Helvetica, sans-serif">
-		  <strong>Distritos</strong></font></td>
-        </tr>
-        <tr> 
-          <td><table width="0%" height="0%" border="0">
-              <tr> 
-                <td class="clsParrofo"><a href="Distritos/lamud.htm" class="clsLink">L&aacute;mud</a></td>
-              </tr>
-              <tr> 
-                <td class="clsParrofo"><a href="Distritos/camporredondo.htm" class="clsLink">Camporredondo</a></td>
-              </tr>
-              <tr> 
-                <td class="clsParrofo"><a href="Distritos/cocabamba.htm" class="clsLink">Cocabamba</a></td>
-              </tr>
-              <tr> 
-                <td class="clsParrofo"><a href="Distritos/colcamar.htm" class="clsLink">Colcamar</a></td>
-              </tr>
-              <tr> 
-                <td class="clsParrofo"><a href="Distritos/conila.htm" class="clsLink">Conila</a></td>
-              </tr>
-              <tr> 
-                <td class="clsParrofo"><a href="Distritos/inguilpata.htm" class="clsLink">Inguilpata</a></td>
-              </tr>
-              <tr> 
-                <td class="clsParrofo"><a href="Distritos/longuita.htm" class="clsLink">L&oacute;nguita</a></td>
-              </tr>
-              <tr> 
-                <td class="clsParrofo"><a href="Distritos/lonyachico.htm" class="clsLink">Lonya 
-                  Chico</a></td>
-              </tr>
-              <tr> 
-                <td class="clsParrofo"><a href="Distritos/luya.htm" class="clsLink">Luya</a></td>
-              </tr>
-              <tr> 
-                <td class="clsParrofo"><a href="Distritos/luyaviejo.htm" class="clsLink">Luya 
-                  Viejo</a></td>
-              </tr>
-              <tr> 
-                <td class="clsParrofo"><a href="Distritos/ocalli.htm" class="clsLink">Ocall&iacute;</a></td>
-              </tr>
-              <tr> 
-                <td class="clsParrofo"><a href="Distritos/ocumal.htm" class="clsLink">Ocumal</a></td>
-              </tr>
-              <tr> 
-                <td class="clsParrofo"><a href="Distritos/pisuquia.htm" class="clsLink">Pisuquia</a></td>
-              </tr>
-              <tr> 
-                <td class="clsParrofo"><a href="Distritos/maria.htm" class="clsLink">Mar&iacute;a</a></td>
-              </tr>
-              <tr> 
-                <td class="clsParrofo"><a href="Distritos/sancristobal.htm" class="clsLink">San 
-                  Crist&oacute;bal</a></td>
-              </tr>
-              <tr> 
-                <td class="clsParrofo"><a href="Distritos/sanfranciscoyeso.htm" class="clsLink">San 
-                  Francisco del Yeso</a></td>
-              </tr>
-              <tr> 
-                <td class="clsParrofo"><a href="Distritos/sanjeronimo.htm" class="clsLink">San 
-                  Jer&oacute;nimo</a></td>
-              </tr>
-              <tr> 
-                <td class="clsParrofo"><a href="Distritos/sanjuanlopecancha.htm" class="clsLink">San 
-                  Juan de Lopecancha</a></td>
-              </tr>
-              <tr> 
-                <td class="clsParrofo"><a href="Distritos/santacatalina.htm" class="clsLink">Santa 
-                  Catalina</a></td>
-              </tr>
-              <tr> 
-                <td class="clsParrofo"><a href="Distritos/santotomas.htm" class="clsLink">Santo 
-                  Tom&aacute;s</a></td>
-              </tr>
-              <tr> 
-                <td class="clsParrofo"><a href="Distritos/tingo.htm" class="clsLink">Tingo</a></td>
-              </tr>
-              <tr> 
-                <td class="clsParrofo"><a href="Distritos/trita.htm" class="clsLink">Trita</a></td>
-              </tr>
-              <tr> 
-                <td class="clsParrofo">&nbsp;</td>
-              </tr>
-            </table></td>
-        </tr>
-      </table></td>
-    <td><table width="100%" height="0" border="0">
-        <tr> 
-          	<td>
-			<IMG src="imagenes/titulo5.jpg">
-		  <hr size="3" color="#006600" width="100%" noshade> 
-			</td>
-        </tr>
-        <tr> 
-          <td> <table width="0" height="0%" border="0">
-              <tr class="clsParrofo"> 
-                <td>&nbsp;</td>
-                <td ><div align="left"><a href="#situacion" class="clsLink2">Situaci&oacute;n y l&iacute;mites</a></div></td>
-                <td > <div align="left"></div></td>
-                <td ><div align="left"><a href="#industrias" class="clsLink2">Industrias</a></div></td>
-                <td ><div align="left"></div></td>
-                <td ><div align="left"><a href="#comunicacion" class="clsLink2">V&iacute;as 
-                    de comunicaci&oacute;n</a></div></td>
-                <td><div align="left"></div></td>
-                <td ><div align="left"><a href="#instituciones" class="clsLink2"> 
-                    Instituciones sociales</a></div></td>
-                <td ><div align="left"></div></td>
-                <td><div align="left"><a href="#poblacion" class="clsLink2"> 
-                    </a><a href="#relatos" class="clsLink2">Relatos hist&oacute;ricos</a></div></td>
-              </tr>
-              <tr class="clsParrofo"> 
-                <td height="15">&nbsp;</td>
-                <td><div align="left"><a href="#riquezas" class="clsLink2"> 
-                    Riquezas naturales</a></div></td>
-                <td> <div align="left"></div></td>
-                <td><div align="left"><a href="#comercio" class="clsLink2">Comercio</a></div></td>
-                <td><div align="left"></div></td>
-                <td><div align="left"><a href="#autoridades" class="clsLink2">Autoridades</a></div></td>
-                <td><div align="left"></div></td>
-                <td><div align="left"><a href="#poblacion" class="clsLink2">Poblaci&oacute;n</a></div></td>
-                <td><div align="left"></div></td>
-                <td><div align="left"><a href="#divpolitica" class="clsLink2"> 
-                    Divisi&oacute;n pol&iacute;tica</a></div></td>
-              </tr>
-            </table>
-            <strong></strong> <hr size="3" color="#006600" width="100%" noshade>  </td>
-        </tr>
-        <tr> 
-          <td><table width="100%" border="0">
-              <tr> 
-                <td colspan="2">&nbsp;</td>
-              </tr>
-              <tr> 
-                <td colspan="2"></td>
-              </tr>
-              <tr> 
-                <td width="95%"><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Situaci&oacute;n 
-                  y l&iacute;mites</font></strong></td>
-                <td width="5%"><div align="right"><a href="#iniciopagina" class="clsLink2">Subir</a></div></td>
-              </tr>
-              <tr> 
-                <td class="clsParrofo"><blockquote> 
-                    <p>La Provincia de Luya, nombre que significa &#8220;alegr&iacute;a&#8221;, 
-                      se halla en la parte meridional del Departamento de Amazonas, 
-                      abarcando un gran sector de la sierra, detr&aacute;s de 
-                      la Cordillera Occidental de los Andes del Per&uacute;.<br>
-                      Limita por el Norte, con la Provincia de Bagua; por el Este, 
-                      con el R&iacute;o Utcubamba, que lo separa de la Provincia 
-                      de Chachapoyas; por el Sur, con la misma Provincia de Chachapoyas; 
-                      y por el Oeste con el r&iacute;o Mara&ntilde;&oacute;n, 
-                      que lo divide de la Provincia de Celend&iacute;n.</p>
-                    <p><strong>Extensi&oacute;n</strong><br>
-                      La superficie de la Provincia se calcula en 7,225 Kil&oacute;metros 
-                      cuadrados.</p>
-                    <p><strong>Orograf&iacute;a</strong><br>
-                      Se halla cruzada por grandes ramales de las Cordilleras 
-                      Central y Oriental de los Andes, siendo sus tierras escarpadas, 
-                      con profundas quebradas, elevadas mesetas y cumbres coronadas 
-                      de n&iacute;vea blancura. Un gran ramal de la Cordillera 
-                      Oriental de los Andes atraviesa esta Provincia de Sur a 
-                      Norte, destac&aacute;ndose como puntos m&aacute;s elevados, 
-                      el &#8220;Shube&#8221;, a m&aacute;s de cinco mil metros 
-                      sobre el nivel del mar, el &#8220;Mes&oacute;n&#8221; a 
-                      cuatro mil quinietos y el &#8220;Santa Clara&#8221;, que 
-                      permanentemente est&aacute;n coronados de nieve perpetua. 
-                      Dentro de estos contrafuertes andinos se destacan hermosas 
-                      mesetas como las de &#8220;Hoyada Grande&#8221; y &#8220;Luya&#8221;, 
-                      en los distritos de L&oacute;nguita y Luya, respectivamente, 
-                      as&iacute; como f&eacute;rtiles valles como los de Pizuquia 
-                      y Cesuya.</p>
-                    <p><strong>Hidrograf&iacute;a</strong><br>
-                      Est&aacute; ba&ntilde;ada por dos caudalosos r&iacute;os: 
-                      el Mara&ntilde;&oacute;n, que naciendo en la Laguna de Huaihuash, 
-                      al norte del Nudo de Pasco, atraviesa en su curso separando 
-                      a esta Provincia de Celend&iacute;n y fertilizando los valles 
-                      de Tup&eacute;n, Mend&aacute;n, Quisquis, Sosc&oacute;mal, 
-                      H&oacute;ndul, etc. El r&iacute;o Utcubmaba en su curso 
-                      impetuoso va tambi&eacute;n fertilizando otros valles de 
-                      menor extensi&oacute;n, como Lopecancha, Cuchulia y otros. 
-                      Fuera de estos r&iacute;os hay otros de menor caudal y que 
-                      sirven de tributarios de los anteriores.</p>
-                    <p><strong>Lagunas</strong><br>
-                      Merecn especial menci&oacute;n, las de Cucha . Cuella y 
-                      Changal&iacute; en el Distrito de L&oacute;nguita, con una 
-                      extensi&oacute;n superficial de 9 Kil&oacute;metros aproximadamente 
-                      cada una.. hay aguas minerales que contienen azufre y yodo, 
-                      como las de Coronta Chacha y la Leg&iacute;a, recomendadas 
-                      para curar las enfermedades de la piel y el est&oacute;mago.</p>
-                    <p><strong>Clima</strong><br>
-                      Tiene la maravilla de poseer todos los climas del mundo, 
-                      desde los m&aacute;s fr&iacute;os, los templados, hasta 
-                      los m&aacute;s calientes de las profundas quebradas. Las 
-                      lluvias son abundantes casi todo el a&ntilde;o, pero tienen 
-                      una etapa de verano, de Junio a Setiembre, con un clima 
-                      primaveral, muy recomendado para los enfermos del pulm&oacute;n. 
-                      Durante todo el a&ntilde;o los vientos son suaves y tranquilos, 
-                      no habi&eacute;ndose registrado en ninguna &eacute;poca 
-                      vientos huracanados que hayan ocasionados da&ntilde;os a 
-                      las poblaciones y sembr&iacute;os.</p>
-                  </blockquote>
-                  <p><a name="riquezas" id="riquezas"></a><hr size="3" color="#006600" width="100%" noshade>
-                  </p></td>
-                <td>&nbsp;</td>
-              </tr>
-              <tr> 
-                <td><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Riquezas 
-                  naturales </font></strong></td>
-                <td class="clsEnlaceSubir"><div align="right"><a href="#iniciopagina" class="clsLink2">Subir</a></div></td>
-              </tr>
-              <tr> 
-                <td class="clsParrofo"><blockquote> 
-                    <p>Las producciones del distrito en los tres reinos de la 
-                      naturaleza son:</p>
-                    <p><strong>En el reino Animal</strong><br>
-                      Se cr&iacute;a ganado vacuno, caballar, lanar, porcino, 
-                      asnal; aves de corral como patos, pavos, gallinas en peque&ntilde;a 
-                      escala. Aves y animales silvestres, que aparecen en los 
-                      tiempos de sembrados, tales como venados, conejos, zorrillos, 
-                      zorros, los que tambi&eacute;n transitan en las noches en 
-                      pos de animales dom&eacute;sticos. Los loros de color verde 
-                      que aparecen en bandadas en la &eacute;poca de la madurez 
-                      del ma&iacute;z. Las palomas silvestres son abundantes en 
-                      las chacras en la &eacute;poca de las cosechas. Aves rapaces: 
-                      gavilanes de color gris que arrasan con los pollos. Tenemos 
-                      tambi&eacute;n los halcones que se alimentan de pajarillos. 
-                      Los p&aacute;jaros como: piuros, huanchacos, jilgueros, 
-                      gorriones, golondrinas, picaflores zorzales y los peque&ntilde;os 
-                      pamperos; abundantes especialmente en las &eacute;pocas 
-                      de cosecha y rastrojo. Aves nocturnas tales como: lechuzas, 
-                      buho, que cruzan el espacio despertando el temor en la gente 
-                      supersticiosa; el murci&eacute;lago que vuela por las noches 
-                      buscando vacunos, porcinos o aves de corral para alimentarse, 
-                      succionando la sangre mientras duermen.</p>
-                    <p><strong>En el Reino Vegetal</strong><br>
-                      Produce trigo, ma&iacute;z, fr&iacute;joles, arvejas, cebada, 
-                      hate zanahoria, culantro, repollo, perejil, huacatay, etc. 
-                      Arboles frutales: duraznos, manzanos, que cuidando sus cultivos 
-                      nos podr&iacute;an dar una producci&oacute;n inmejorable; 
-                      los higos, el capul&iacute;, etc. Arboles industriales: 
-                      eucalipto, nogal,. Entre las plantas forrajeras se cultivan 
-                      la alfalfa, adem&aacute;s tenemos plantas silvestres: el 
-                      aliso, tayango, huarango, chillca, gran variedad de plantas 
-                      medicinales tales como la manzanilla, apio, toronjil, menta, 
-                      campanilla, hierbaluisa, etc.</p>
-                    <p><strong>En el Reino Mineral</strong><br>
-                      Luya cuenta con grandes catneras, muchas de ellas con piedra 
-                      caliza, existen yacimientos de arcilla, minas de colpar, 
-                      arena y ripio.</p>
-                  </blockquote>
-                  <p><a name="industrias" id="industrias"></a><hr size="3" color="#006600" width="100%" noshade></p></td>
-                <td class="clsParrofo">&nbsp;</td>
-              </tr>
-              <tr> 
-                <td><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Industrias</font></strong></td>
-                <td class="clsEnlaceSubir"><div align="right"><a href="#iniciopagina" class="clsLink2">Subir</a></div></td>
-              </tr>
-              <tr> 
-                <td class="clsParrofo"><blockquote> 
-                    <p>Las m&aacute;s saltantes son: la fabricaci&oacute;n de 
-                      chancaca y aguardiente, que se extraen del jugo de la ca&ntilde;a 
-                      de az&uacute;car; los tejidos de art&iacute;culos de lana 
-                      y de algod&oacute;n. Los nativos se dedican al hilado y 
-                      tejido de ponchos y bayetas, aprovech&aacute;ndose para 
-                      el vestido de los ind&iacute;genas. Con cerdas de los animales 
-                      se tejen finos cedazos y de la curtiembre de cueros se confeccionan 
-                      cinturones y &#8220;ojotas&#8221;. Las ocupaciones dom&eacute;sticas 
-                      de las mujeres son: el hilado, el tejido y la cocina, y 
-                      los hombres se dedican a las labores del campo, alternando 
-                      con la arrier&iacute;a, los viajes y el tejido de canastas 
-                      de mimbre. Se consume mucho el pan de trigo que produce 
-                      la regi&oacute;n y el aguardiente que reemplaza al pisco.</p>
-                  </blockquote>
-                  <p><a name="comercio" id="comercio"></a><hr size="3" color="#006600" width="100%" noshade></p></td>
-                <td class="clsParrofo">&nbsp;</td>
-              </tr>
-              <tr> 
-                <td class="clsParrofo"><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> 
-                  Comercio</font></strong></td>
-                <td class="clsEnlaceSubir"><div align="right"><a href="#iniciopagina" class="clsLink2">Subir</a></div></td>
-              </tr>
-              <tr> 
-                <td class="clsParrofo"><blockquote> 
-                    <p>La falta de v&iacute;as de comunicaci&oacute;n f&aacute;ciles 
-                      y baratas hace dif&iacute;cil las transacciones comerciales 
-                      en esta provincia, siendo su vida comercial un tanto l&aacute;nguida. 
-                      La causa para esta dificultad se encuentra en la naturaleza 
-                      de su suelo, que es excesivamente escabroso, haci&eacute;ndose 
-                      dif&iacute;cil la construcci&oacute;n de carreteras por 
-                      el interior de la provincia. Actualmente los pueblos, compran 
-                      y venden sus productos utilizando el sistema del trueque. 
-                      La vida de los pueblos se desarrolla por el sistema de comunidades, 
-                      dando margen a un comercio interno.</p>
-                  </blockquote>
-                  <p><a name="comunicacion" id="comunicacion"></a><hr size="3" color="#006600" width="100%" noshade></p></td>
-                <td class="clsParrofo">&nbsp;</td>
-              </tr>
-              <tr> 
-                <td class="clsParrofo"><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif">V&iacute;as 
-                  de comunicaci&oacute;n</font></strong></td>
-                <td class="clsEnlaceSubir"><div align="right"><a href="#iniciopagina">Subir</a></div></td>
-              </tr>
-              <tr> 
-                <td class="clsParrofo"><blockquote> 
-                    <p>Casi todos los pueblos tienen servicio de Correos, recibiendo 
-                      y transmitiendo la correspondencia postal una vez por semana. 
-                      Tambi&eacute;n cuenta con una buena red telef&oacute;nica, 
-                      que facilita la comunicaci&oacute;n r&aacute;pida, a&uacute;n 
-                      a los pueblos m&aacute;s apartados de la provincia. Por 
-                      acci&oacute;n masiva del pueblo de L&aacute;mud, Luya y 
-                      sus cercan&iacute;as, se ha construido la carretera del 
-                      Puerto de C&aacute;clic a la ciudad de L&aacute;mud, siendo 
-                      este el &uacute;nico tramo de carretera que tiene la provincia 
-                      de Luya y que pone en comunicaci&oacute;n con la Costa utilizando 
-                      la carretera Olmos &#8211; R&iacute;o Mara&ntilde;&oacute;n 
-                      y Chachapoyas. Actualmente los pueblos se comunican entre 
-                      s&iacute;, por caminos de herradura, utilizando lomos de 
-                      mula o cargueros. La mayor&iacute;a de las riquezas de la 
-                      tierra, sobre todo las del Valle de Cesuya se pierden y 
-                      los cultivos restantes apenas abastecen para el consumo 
-                      local de los habitantes. Es actualmente indispensable la 
-                      construcci&oacute;n del proyecto de un ramal de la carretera 
-                      Corral Quemado que penetre hasta el valle de Cesuya, poniendo 
-                      en comunicaci&oacute;n con la costa a importantes pueblos 
-                      de esa regi&oacute;n.</p>
-                    <p><strong>Comunicaci&oacute;n con la Capital de la Rep&uacute;blica</strong><br>
-                      Para viajar a L&aacute;mud, es preciso hacerlo por Costa 
-                      hasta Chiclayo, ya sea en autom&oacute;vil o en avi&oacute;n. 
-                      De Chiclayo sale un &oacute;mnibus diario de la Agencia 
-                      D&iacute;az, que pasa por el cruce de Olmos hacia el interior, 
-                      atraviesa el r&iacute;o Mara&ntilde;&oacute;n en el famoso 
-                      puente semirr&iacute;gido de &#8220;Corral Quemado&#8221; 
-                      y cruzando el hermosos valle de Bagua y los campamentos 
-                      militares de &#8220;El Ingenio&#8221; y &#8220;El Milagro&#8221;, 
-                      llega al Puerto C&aacute;clic, donde se hace trasbordo y 
-                      se toma el ramal de carretera que ingresa a L&aacute;mud. 
-                      El viaje es c&oacute;modo por lo pintoresco del ambiente, 
-                      pero dificultoso por lo accidentado del terreno.</p>
-                  </blockquote>
-                  <p><a name="autoridades" id="autoridades"></a><hr size="3" color="#006600" width="100%" noshade></p></td>
-                <td class="clsParrofo">&nbsp;</td>
-              </tr>
-              <tr> 
-                <td class="clsParrofo"><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Autoridades</font></strong></td>
-                <td class="clsEnlaceSubir"><div align="right"><a href="#iniciopagina" class="clsLink2">Subir</a></div></td>
-              </tr>
-              <tr> 
-                <td class="clsParrofo"><blockquote> 
-                    <p>Tiene Subprefectura, Juzgados: de Instrucci&oacute;n y 
-                      de Primera Instancia, Agencia Fiscal, Municipalidad, Parroquias, 
-                      en Luya, L&aacute;mud, Santo Tom&aacute;s y Ocall&iacute;, 
-                      Merece especial menci&oacute;n la obra misionera que vienen 
-                      cumpliendo los Padres Mar&iacute;n y Gonzales, quienes teniendo 
-                      como &uacute;nica arma la Cruz de Cristo, recorren los caminos 
-                      solitarios, haciendo frente a los repelentes ofidios y llevando 
-                      la paz y tranquilidad a los hogares con sus sabias doctrinas. 
-                      El Padre Tom&aacute;s Mar&iacute;n, ha ejercido la Alcald&iacute;a 
-                      de la Provincia, dejando obras de beneficio para los pobladores.<br>
-                      La Guardia Civil cuenta en la provincia, con cinco Puestos 
-                      distribuidos en: Santo Tom&aacute;s, Tingo, Colcamar, Ocall&iacute; 
-                      y L&aacute;mud. Cada Puesto cuenta con cuatro guardias y 
-                      un Clase que hace de Jefe. La abnegada misi&oacute;n que 
-                      cumplen estos servidores de la Patria hace que la vida ciudadana 
-                      se desenvuelva con tranquilidad y garant&iacute;a. Estos 
-                      Puestos dependen del 2do. Sector con sede en la ciudad de 
-                      L&aacute;mud.</p>
-                  </blockquote>
-                  <p><a name="instituciones" id="instituciones"></a><hr size="3" color="#006600" width="100%" noshade></p></td>
-                <td class="clsParrofo">&nbsp;</td>
-              </tr>
-              <tr> 
-                <td><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Instituciones 
-                  sociales</font></strong></td>
-                <td class="clsEnlaceSubir"><div align="right"><a href="#iniciopagina" class="clsLink2">Subir</a></div></td>
-              </tr>
-              <tr> 
-                <td class="clsParrofo"><blockquote> 
-                    <p> La Provincia de Luya tiene dos Colegios Secundarios Mixtos, 
-                      denominados &#8220;Blas Valera&#8221; y Jos&eacute; Braulio 
-                      de Camporredondo&#8221;, creados por R.M. N&ordm; 2835 de 
-                      fecha 14 de marzo de 1957.<br>
-                      A un costo de S/. 65,000.00 el Concejo Municipal de L&aacute;mud 
-                      ha adquirido un terreno de ocho mil m2, para la construcci&oacute;n 
-                      de un local destinado al Colegio &#8220;Blas Valera&#8221;. 
-                      Este inmueble ha sido inscrito en el Marges&iacute; de Bienes 
-                      del Ministerio de Educaci&oacute;n P&uacute;blica, seg&uacute;n 
-                      Resoluci&oacute;n Directoral N&ordm; 35795 de fecha 27 de 
-                      octubre de 1962. en la actualidad, la Asociaci&oacute;n 
-                      de Padres de Familia est&aacute; realizando los tr&aacute;mites 
-                      necesarios para conseguir una partida presupuestal destinada 
-                      a la construcci&oacute;n del local en dicho terreno. Tambi&eacute;n 
-                      tiene una Inspecci&oacute;n de Educaci&oacute;n, creada 
-                      en 1945 pues desde 1928 funcionaba como Comisi&oacute;n 
-                      Escolar. Hay un Colegio Agropecuario que funciona en Luya 
-                      y 103 Escuelas Primarias distribuidas en toda la provincia. 
-                      Cuenta con 17 Centros Rentados de Alfabetizaci&oacute;n 
-                      ubicados en los lugares en donde no funcionan escuelas, 
-                      muchos Centros C&iacute;vicos de Alfabetizaci&oacute;n a 
-                      cargo de maestros en servicio oficial, y a cargo del Padre 
-                      Gonz&aacute;les, P&aacute;rroco de Ocall&iacute;, funciona 
-                      una Escuela ambulante denominada &#8220;Escuela de Capacitaci&oacute;n 
-                      Rural&#8221; que como su nombre lo indica tiende a dar conocimientos 
-                      pr&aacute;cticos a la juventud, fijando el amor al terru&ntilde;o, 
-                      dentro de un &aacute;mbito de moral cristiana.<br>
-                      <br>
-                      A continuaci&oacute;n algunos datos estad&iacute;sticos:</p>
-                    <table width="0" border="0">
-                      <tr class="clsParrofo"> 
-                        <td colspan="8"><strong>Poblaci&oacute;n Escolar en Primaria</strong></td>
-                      </tr>
-                      <tr bgcolor="#FFCC00" class="clsParrofo"> 
-                        <td><div align="center">Jard.</div></td>
-                        <td><div align="center">Trans.</div></td>
-                        <td><div align="center">1&ordm;A&ntilde;o</div></td>
-                        <td><div align="center">2&ordm;A&ntilde;o </div></td>
-                        <td><div align="center">3&ordm;A&ntilde;o </div></td>
-                        <td><div align="center">4&ordm;A&ntilde;o</div></td>
-                        <td><div align="center">5&ordm;A&ntilde;o </div></td>
-                        <td><div align="center">Total</div></td>
-                      </tr>
-                      <tr bgcolor="#FFCC99" class="clsParrofo"> 
-                        <td><div align="center">36</div></td>
-                        <td><div align="center">2436</div></td>
-                        <td><div align="center">1453</div></td>
-                        <td><div align="center">935</div></td>
-                        <td><div align="center">705</div></td>
-                        <td><div align="center">463</div></td>
-                        <td><div align="center">324</div></td>
-                        <td><div align="center">6352</div></td>
-                      </tr>
-                    </table>
-                    <br>
-                    <table width="0" border="0">
-                      <tr class="clsParrofo"> 
-                        <td colspan="4"><strong>Planteles</strong></td>
-                      </tr>
-                      <tr bgcolor="#FFCC00" class="clsParrofo"> 
-                        <td><div align="center">De Varones</div></td>
-                        <td><div align="center">De Mujeres</div></td>
-                        <td><div align="center">Mixtos</div></td>
-                        <td><div align="center">Total</div></td>
-                      </tr>
-                      <tr bgcolor="#FFCC99" class="clsParrofo"> 
-                        <td><div align="center">27</div></td>
-                        <td><div align="center">27</div></td>
-                        <td><div align="center">49</div></td>
-                        <td><div align="center">103</div></td>
-                      </tr>
-                    </table>
-                    <p>De estos ocupan local alquilados por el Estado solamente 
-                      9 escuelas con un egreso de 1,470.00 soles mensuales, las 
-                      dem&aacute;s tienen local propio, cedidos por las Comunidades, 
-                      en forma totalmente gratuita.</p>
-                    <p><br>
-                      <strong>Campa&ntilde;a de Alfabetizaci&oacute;n.</strong></p>
-                    <table width="0" border="0">
-                      <tr class="clsParrofo"> 
-                        <td colspan="3"><strong>Adultos Matriculados</strong></td>
-                      </tr>
-                      <tr bgcolor="#FFCC00" class="clsParrofo"> 
-                        <td> <div align="center">Varones</div></td>
-                        <td> <div align="center">Mujeres</div></td>
-                        <td><div align="center">Total</div></td>
-                      </tr>
-                      <tr bgcolor="#FFCC99" class="clsParrofo"> 
-                        <td><div align="center">313</div></td>
-                        <td><div align="center">763</div></td>
-                        <td><div align="center">1076</div></td>
-                      </tr>
-                    </table>
-                    <p>Lo que significa que el Magisterio Primario de Luya, est&aacute; 
-                      realizando una plausible labor en beneficio de la educaci&oacute;n 
-                      de la masa adulta con el objeto de incorporarla a la vida 
-                      de la cultura desarraigando el tremendo mal de la ignorancia 
-                      que tanto da&ntilde;o hace al Per&uacute;.</p>
-                    <table width="0" border="0">
-                      <tr class="clsParrofo"> 
-                        <td colspan="4"><strong> Personal Docente por Categor&iacute;a</strong></td>
-                      </tr>
-                      <tr bgcolor="#FFCC00" class="clsParrofo"> 
-                        <td><div align="center">1ra.Cat.</div></td>
-                        <td><div align="center">2da.Cat.</div></td>
-                        <td><div align="center">3ra.Cat</div></td>
-                        <td><div align="center">Total</div></td>
-                      </tr>
-                      <tr bgcolor="#FFCC99" class="clsParrofo"> 
-                        <td><div align="center">31</div></td>
-                        <td><div align="center">20</div></td>
-                        <td><div align="center">134</div></td>
-                        <td><div align="center">185</div></td>
-                      </tr>
-                    </table>
-                    <p>Lo que revela un predominio aplastante de maestros de 3ra. 
-                      Categor&iacute;a, en cuyo grupo est&aacute;n incluidos los 
-                      maestros contratados y en servicio accidental.</p>
-                    <p><strong>Refectorios</strong><br>
-                      Son instituciones de beneficio social para dar alimentaci&oacute;n 
-                      a los escolares desnutridos. Son sostenidos por el Estado 
-                      y dependen del Ministerio de Salud P&uacute;blica. En la 
-                      Provincia funcionan un total de 6 refectorios: en Luya, 
-                      L&aacute;mud, Colcamar,, Inguilpata, Ocall&iacute; y Camporredondo. 
-                      El Inspector de Educaci&oacute;n don Augustos Tuesta R&iacute;os, 
-                      en su af&aacute;n de aumentar el n&uacute;mero de estos 
-                      servicios ha solicitado la instalaci&oacute;n de nuevos 
-                      refectorios en 10 escuelas m&aacute;s, ya que es un valioso 
-                      aporte para combatir el ausentismo escolar.</p>
-                  </blockquote>
-                  <p><a name="poblacion" id="poblacion"></a><hr size="3" color="#006600" width="100%" noshade></p></td>
-                <td class="clsParrofo">&nbsp;</td>
-              </tr>
-              <tr> 
-                <td><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Poblaci&oacute;n</font></strong></td>
-                <td class="clsEnlaceSubir"><div align="right"><a href="#iniciopagina" class="clsLink2">Subir</a></div></td>
-              </tr>
-              <tr> 
-                <td class="clsParrofo"><blockquote> 
-                    <p>El siguiente cuadro determina el n&uacute;mero de personas 
-                      que habitan en la Provincia de Luya, seg&uacute;n el Censo 
-                      de 1961.</p>
-                    <table width="0" height="0" border="0">
-                      <tr class="clsParrofo"> 
-                        <td width="117" rowspan="2" bgcolor="#006699"> <div align="center"><font color="#FFFFFF"><strong>Distritos</strong></font></div></td>
-                        <td colspan="3" bgcolor="#006699"> <div align="center"><font color="#FFCC00"><strong>Urbana</strong></font></div></td>
-                        <td colspan="3" bgcolor="#006699"> <div align="center"><font color="#FFCC00"><strong>Rural</strong></font></div></td>
-                        <td width="91" rowspan="2" bgcolor="#006699"> <div align="center"><font color="#FFFFFF"><strong>TotalGeneral</strong></font></div></td>
-                      </tr>
-                      <tr> 
-                        <td width="63" bgcolor="#006699" class="clsParrofo"> <div align="center"><font color="#FFCC00"><strong>Hombres</strong></font></div></td>
-                        <td width="54" bgcolor="#006699" class="clsParrofo"> <div align="center"><font color="#FFCC00"><strong>Mujeres</strong></font></div></td>
-                        <td width="44" bgcolor="#006699" class="clsParrofo"> <div align="center"><font color="#FFCC00"><strong>Total</strong></font></div></td>
-                        <td width="63" bgcolor="#006699" class="clsParrofo"> <div align="center"><font color="#FFCC00"><strong>Hombres</strong></font></div></td>
-                        <td width="54" bgcolor="#006699" class="clsParrofo"> <div align="center"><font color="#FFCC00"><strong>Mujeres</strong></font></div></td>
-                        <td width="44" bgcolor="#006699" class="clsParrofo"> <div align="center"><font color="#FFCC00"><strong>Total</strong></font></div></td>
-                      </tr>
-                      <tr class="clsParrofo"> 
-                        <td colspan="8"> <hr align="left" noshade></td>
-                      </tr>
-                      <tr class="clsParrofo"> 
-                        <td bgcolor="#99CCFF"> <div align="left"><strong>L&aacute;mud 
-                            </strong></div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">1106</div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">1402</div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">2508</div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">238</div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">252</div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">490</div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">2998</div></td>
-                      </tr>
-                      <tr class="clsParrofo"> 
-                        <td bgcolor="#BFEBF9"> <div align="left"><strong>Camporredondo 
-                            </strong></div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">942</div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">715</div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">1657</div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">659</div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">479</div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">1138</div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">2795</div></td>
-                      </tr>
-                      <tr class="clsParrofo"> 
-                        <td bgcolor="#99CCFF"> <div align="left"><strong>Cocabamba 
-                            </strong></div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">243</div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">274</div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">517</div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">339</div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">331</div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">670</div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">1187</div></td>
-                      </tr>
-                      <tr class="clsParrofo"> 
-                        <td bgcolor="#BFEBF9"> <div align="left"><strong>Colcamar 
-                            </strong></div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">441</div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">845</div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">1286</div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">438</div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">518</div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">956</div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">2242</div></td>
-                      </tr>
-                      <tr class="clsParrofo"> 
-                        <td bgcolor="#99CCFF"> <div align="left"><strong>Conila 
-                            </strong></div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">445</div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">388</div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">833</div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">282</div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">283</div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">565</div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">1398</div></td>
-                      </tr>
-                      <tr class="clsParrofo"> 
-                        <td bgcolor="#BFEBF9"> <div align="left"><strong>Inguilpata 
-                            </strong></div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">170</div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">191</div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">361</div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">312</div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">355</div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">667</div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">1028</div></td>
-                      </tr>
-                      <tr class="clsParrofo"> 
-                        <td height="17" bgcolor="#99CCFF"> <div align="left"><strong>L&oacute;nguita 
-                            </strong></div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">33</div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">54</div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">87</div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">254</div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">110</div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">464</div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">551</div></td>
-                      </tr>
-                      <tr class="clsParrofo"> 
-                        <td bgcolor="#BFEBF9"> <div align="left"><strong>Lonya 
-                            Chico </strong></div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">175</div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">308</div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">483</div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">399</div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">486</div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">885</div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">1368</div></td>
-                      </tr>
-                      <tr class="clsParrofo"> 
-                        <td bgcolor="#99CCFF"> <div align="left"><strong>Luya 
-                            </strong></div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">572</div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">754</div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">1326</div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">980</div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">1094</div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">2074</div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">3400</div></td>
-                      </tr>
-                      <tr class="clsParrofo"> 
-                        <td bgcolor="#BFEBF9"> <div align="left"><strong>Luya 
-                            Viejo </strong></div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">88</div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">139</div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">227</div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">133</div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">95</div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">228</div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">455</div></td>
-                      </tr>
-                      <tr class="clsParrofo"> 
-                        <td bgcolor="#99CCFF"> <div align="left"><strong>Ocall&iacute; 
-                            </strong></div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">641</div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">597</div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">1234</div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">306</div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">261</div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">567</div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">1805</div></td>
-                      </tr>
-                      <tr class="clsParrofo"> 
-                        <td bgcolor="#BFEBF9"> <div align="left"><strong>Ocumal 
-                            </strong></div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">599</div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">714</div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">1313</div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">729</div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">715</div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">1444</div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">2757</div></td>
-                      </tr>
-                      <tr class="clsParrofo"> 
-                        <td bgcolor="#99CCFF"> <div align="left"><strong>Pisuquia 
-                            </strong></div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">157</div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">139</div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">296</div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">1188</div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">1244</div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">2432</div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">2728</div></td>
-                      </tr>
-                      <tr class="clsParrofo"> 
-                        <td bgcolor="#BFEBF9"> <div align="left"><strong>Mar&iacute;a 
-                            </strong></div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">46</div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">50</div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">96</div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">120</div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">181</div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">301</div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">397</div></td>
-                      </tr>
-                      <tr class="clsParrofo"> 
-                        <td bgcolor="#99CCFF"> <div align="left"><strong>San Crist&oacute;bal 
-                            </strong></div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">298</div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">436</div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">734</div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">75</div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">79</div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">154</div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">888</div></td>
-                      </tr>
-                      <tr class="clsParrofo"> 
-                        <td bgcolor="#BFEBF9"> <div align="left"><strong>S. Fco. 
-                            Yeso </strong></div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">130</div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">130</div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">260</div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">124</div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">133</div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">257</div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">517</div></td>
-                      </tr>
-                      <tr class="clsParrofo"> 
-                        <td bgcolor="#99CCFF"> <div align="left"><strong>San Jer&oacute;nimo 
-                            </strong></div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">210</div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">244</div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">454</div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">692</div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">749</div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">1441</div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">1895</div></td>
-                      </tr>
-                      <tr class="clsParrofo"> 
-                        <td bgcolor="#BFEBF9"> <div align="left"><strong>S.J. 
-                            Lopecancha </strong></div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">38</div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">52</div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">90</div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">219</div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">253</div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">472</div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">562</div></td>
-                      </tr>
-                      <tr class="clsParrofo"> 
-                        <td bgcolor="#99CCFF"> <div align="left"><strong>Santa 
-                            Catalina </strong></div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">50</div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">110</div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">160</div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">135</div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">265</div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">400</div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">560</div></td>
-                      </tr>
-                      <tr class="clsParrofo"> 
-                        <td bgcolor="#BFEBF9"> <div align="left"><strong>Santo 
-                            Tom&aacute;s </strong></div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">176</div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">186</div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">362</div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">1354</div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">1269</div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">2623</div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">2985</div></td>
-                      </tr>
-                      <tr class="clsParrofo"> 
-                        <td bgcolor="#99CCFF"> <div align="left"><strong>Tingo 
-                            </strong></div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">182</div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">203</div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">385</div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">307</div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">336</div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">643</div></td>
-                        <td bgcolor="#99CCFF"> <div align="right">1028</div></td>
-                      </tr>
-                      <tr class="clsParrofo"> 
-                        <td bgcolor="#BFEBF9"> <div align="left"><strong>Trita 
-                            </strong></div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">268</div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">303</div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">571</div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">55</div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">69</div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">124</div></td>
-                        <td bgcolor="#BFEBF9"> <div align="right">695</div></td>
-                      </tr>
-                      <tr class="clsParrofo"> 
-                        <td colspan="8"> <hr align="left" noshade></td>
-                      </tr>
-                      <tr bgcolor="#FFCC00" class="clsParrofo"> 
-                        <td> <div align="left"><strong>TOTALES </strong></div></td>
-                        <td> <div align="right"><strong>7010</strong></div></td>
-                        <td> <div align="right"><strong>8234</strong></div></td>
-                        <td> <div align="right"><strong>15244</strong></div></td>
-                        <td> <div align="right"><strong>9339</strong></div></td>
-                        <td> <div align="right"><strong>9657</strong></div></td>
-                        <td> <div align="right"><strong>18995</strong></div></td>
-                        <td> <div align="right"><strong>34239</strong></div></td>
-                      </tr>
-                    </table>
-                    <p>Luego la poblaci&oacute;n total de la provincia de Luya 
-                      es de 24,239 habitantes, con una densidad aproximada de 
-                      4 habitantes por Kil&oacute;metro cuadrado. La mayor&iacute;a 
-                      de sus pobladores son de raza mestiza, con un peque&ntilde;o 
-                      porcentaje de nativos o indios que han sido castellanizados. 
-                      No existe la raza negra, pero en algunos sitios ya est&aacute;n 
-                      invadiendo los negros, asi&aacute;ticos y jud&iacute;os, 
-                      paulatinamente.</p>
-                    <p><strong>R&eacute;gimen de la Propiedad</strong><br>
-                      Las poblaciones est&aacute;n agrupadas por Comunidades y 
-                      casi todos son peque&ntilde;os propietarios. No hay latifundistas, 
-                      dominantes ni gamonales, todos tienen techo y tierra, a&uacute;n 
-                      cuando en distinto grado de progreso. Impera la pobreza 
-                      y los m&eacute;todos rutinarios de vida, debido al deficiente 
-                      intercambio comercial. Sus productos pierden por que no 
-                      pueden ser exportados. Las cosechas de cereales de excelente 
-                      calidad son pasto de polillas y roedores.</p>
-                    <p><strong>Capital</strong><br>
-                      Es la antigua ciudad de L&aacute;mud, situada a orillas 
-                      del r&iacute;o Jucusbamba, fundada en tiempos de la colonia 
-                      en una pintoresca pradera. Est&aacute; a 2,314 metros sobre 
-                      el nivel del mar y disfruta de maravilloso clima. El terremoto 
-                      de 1928 dej&oacute; casi en ruinas a las viejas construcciones 
-                      de adobes ocasionando muchas p&eacute;rdidas. Cuenta con 
-                      una poblaci&oacute;n de 2,500 habitantes, seg&uacute;n el 
-                      Censo de 1961.</p>
-                  </blockquote>
-                  <p><a name="relatos" id="relatos"></a><hr size="3" color="#006600" width="100%" noshade></p></td>
-                <td class="clsParrofo">&nbsp;</td>
-              </tr>
-              <tr> 
-                <td class="clsParrofo"><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Relatos 
-                  hist&oacute;ricos </font></strong></td>
-                <td ><div align="right"><a href="#iniciopagina" class="clsLink2">Subir</a></div></td>
-              </tr>
-              <tr> 
-                <td class="clsParrofo"><blockquote> 
-                    <p><strong>Relatos Hist&oacute;ricos</strong><br>
-                      Durante el Incanato perteneci&oacute; al Reino de los Chachapoyas 
-                      o Sachapuyos, y cuando el Inca T&uacute;pac Yupanqui emprendi&oacute; 
-                      la conquista de este Reino, le ofrecieron una fuerte resistencia 
-                      desde la Fortaleza de Kuelap, pero ante la magnanimidad 
-                      del Inca resolvieron incorporarse al Imperio.<br>
-                      <br>
-                      Durante la Colonia, Soconta Cubay, natural de la tribu de 
-                      Cu&eacute;mal, contribuy&oacute; con un fuerte ejercito 
-                      brotado de la Tribuo de Olto, para hacer resistencia a Alonso 
-                      de Alvarado que avanzaba por Bagua en Plan de Conquista, 
-                      quien variando su ruta tuvo que surcar en las orillas del 
-                      Utcubamba, para llegar a Chachapoyas, dejando desapercibida 
-                      la hermosa planicie de Luya, donde hubiera podido fundar 
-                      una ciudad.<br>
-                      <br>
-                      En los Albores de la Independencia, los pueblos de Luya, 
-                      L&aacute;mud, Cu&eacute;mal y Olto contribuyeron con v&iacute;veres, 
-                      provisiones y combatientes para la hist&oacute;rica batalla 
-                      de &#8220;Higos Urco&#8221;.<br>
-                      En los comienzos de la Rep&uacute;blica, los luyanos dieron 
-                      fin a la &uacute;ltima banda de Saqueadores que encabezados 
-                      por Romero Flores pretendieron hacer desmanes en las ciudades 
-                      de Luya, L&aacute;mud y Chachapoyas.<br>
-                      <br>
-                      Es proverbial el sentido art&iacute;stico que tienen los 
-                      habitantes de Conila y Cohech&aacute;n. All&iacute; se organiz&oacute; 
-                      la primera Banda de m&uacute;sicos que tuvo el departamento, 
-                      bajo la batuta del maestro Rom&aacute;n Chuquizuta, licenciado 
-                      del ejercito que fue a combatir en la guerra con Colombia 
-                      cuando se disputaba el Puerto de Leticia.<br>
-                      En 1928 se produjo un terremoto, que sacudi&oacute; toda 
-                      la provincia sembrando el p&aacute;nico en sus habitantes 
-                      y produciendo graves da&ntilde;os materiales. En diferentes 
-                      partes las tierras se cuartearon y el suelo segu&iacute;a 
-                      sacudi&eacute;ndose por espacio de m&aacute;s de un mes. 
-                      Se cree que el epicentro de este movimiento s&iacute;smico 
-                      estuvo en Ja&eacute;n.</p>
-                  </blockquote>
-                  <p><a name="divpolitica"></a><hr size="3" color="#006600" width="100%" noshade></p></td>
-                <td class="clsParrofo">&nbsp;</td>
-              </tr>
-              <tr> 
-                <td><strong><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Divisi&oacute;n 
-                  pol&iacute;tica</font></strong></td>
-                <td class="clsEnlaceSubir"><div align="right"><a href="#iniciopagina" class="clsLink2">Subir</a></div></td>
-              </tr>
-              <tr> 
-                <td class="clsParrofo"><blockquote> 
-                    <p>La provincia de Luya fue creada por Ley de 5 de febrero 
-                      de 1861, y en la actualidad cuenta con 22 distritos que 
-                      son:</p>
-                    <table width="0" height="0" border="0">
-                      <tr bgcolor="#006699" class="clsParrofo"> 
-                        <td><font color="#FFFFFF"><strong>Distrito </strong></font></td>
-                        <td><font color="#FFFFFF"><strong>Capital</strong></font></td>
-                      </tr>
-                      <tr class="clsParrofo"> 
-                        <td bgcolor="#99CCFF"> <div align="left">L&aacute;mud 
-                          </div></td>
-                        <td bgcolor="#99CCFF"> <div align="left">L&aacute;mud 
-                          </div></td>
-                      </tr>
-                      <tr class="clsParrofo"> 
-                        <td bgcolor="#BFEBF9"> <div align="left">Camporredondo 
-                          </div></td>
-                        <td bgcolor="#BFEBF9"> <div align="left">Camporredondo 
-                          </div></td>
-                      </tr>
-                      <tr class="clsParrofo"> 
-                        <td bgcolor="#99CCFF"> <div align="left">Cocabamba </div></td>
-                        <td bgcolor="#99CCFF"> <div align="left">Cocabamba </div></td>
-                      </tr>
-                      <tr class="clsParrofo"> 
-                        <td bgcolor="#BFEBF9"> <div align="left">Colcamar </div></td>
-                        <td bgcolor="#BFEBF9"> <div align="left">Colcamar </div></td>
-                      </tr>
-                      <tr class="clsParrofo"> 
-                        <td bgcolor="#99CCFF"> <div align="left">Conila </div></td>
-                        <td bgcolor="#99CCFF"> <div align="left">Cohech&aacute;n</div></td>
-                      </tr>
-                      <tr class="clsParrofo"> 
-                        <td bgcolor="#BFEBF9"> <div align="left">Inguilpata </div></td>
-                        <td bgcolor="#BFEBF9"> <div align="left">Inguilpata </div></td>
-                      </tr>
-                      <tr class="clsParrofo"> 
-                        <td height="17" bgcolor="#99CCFF"> <div align="left">L&oacute;nguita 
-                          </div></td>
-                        <td bgcolor="#99CCFF"> <div align="left">L&oacute;nguita 
-                          </div></td>
-                      </tr>
-                      <tr class="clsParrofo"> 
-                        <td bgcolor="#BFEBF9"> <div align="left">Lonya Chico </div></td>
-                        <td bgcolor="#BFEBF9"> <div align="left">Lonya Chico </div></td>
-                      </tr>
-                      <tr class="clsParrofo"> 
-                        <td bgcolor="#99CCFF"> <div align="left">Luya </div></td>
-                        <td bgcolor="#99CCFF"> <div align="left">Luya </div></td>
-                      </tr>
-                      <tr class="clsParrofo"> 
-                        <td bgcolor="#BFEBF9"> <div align="left">Luya Viejo </div></td>
-                        <td bgcolor="#BFEBF9"> <div align="left">Luya Viejo </div></td>
-                      </tr>
-                      <tr class="clsParrofo"> 
-                        <td bgcolor="#99CCFF"> <div align="left">Ocall&iacute; 
-                          </div></td>
-                        <td bgcolor="#99CCFF"> <div align="left">Ocall&iacute; 
-                          </div></td>
-                      </tr>
-                      <tr class="clsParrofo"> 
-                        <td bgcolor="#BFEBF9"> <div align="left">Ocumal </div></td>
-                        <td bgcolor="#BFEBF9"> <div align="left">Ocumal </div></td>
-                      </tr>
-                      <tr class="clsParrofo"> 
-                        <td bgcolor="#99CCFF"> <div align="left">Pisuquia </div></td>
-                        <td bgcolor="#99CCFF"> <div align="left">Yombl&oacute;n</div></td>
-                      </tr>
-                      <tr class="clsParrofo"> 
-                        <td bgcolor="#BFEBF9"> <div align="left">Mar&iacute;a 
-                          </div></td>
-                        <td bgcolor="#BFEBF9"> <div align="left">Mar&iacute;a 
-                          </div></td>
-                      </tr>
-                      <tr class="clsParrofo"> 
-                        <td bgcolor="#99CCFF"> <div align="left">San Crist&oacute;bal 
-                          </div></td>
-                        <td bgcolor="#99CCFF"> <div align="left">Olto </div></td>
-                      </tr>
-                      <tr class="clsParrofo"> 
-                        <td bgcolor="#BFEBF9"> <div align="left">S. Fco. Yeso 
-                          </div></td>
-                        <td bgcolor="#BFEBF9"> <div align="left">Yeso</div></td>
-                      </tr>
-                      <tr class="clsParrofo"> 
-                        <td bgcolor="#99CCFF"> <div align="left">San Jer&oacute;nimo 
-                          </div></td>
-                        <td bgcolor="#99CCFF"> <div align="left">Paclas </div></td>
-                      </tr>
-                      <tr class="clsParrofo"> 
-                        <td bgcolor="#BFEBF9"> <div align="left">S.J. Lopecancha 
-                          </div></td>
-                        <td bgcolor="#BFEBF9"> <div align="left"> Lopecancha </div></td>
-                      </tr>
-                      <tr class="clsParrofo"> 
-                        <td bgcolor="#99CCFF"> <div align="left">Santa Catalina 
-                          </div></td>
-                        <td bgcolor="#99CCFF"> <div align="left">Santa Catalina 
-                          </div></td>
-                      </tr>
-                      <tr class="clsParrofo"> 
-                        <td bgcolor="#BFEBF9"> <div align="left">Santo Tom&aacute;s 
-                          </div></td>
-                        <td bgcolor="#BFEBF9"> <div align="left">Santo Tom&aacute;s 
-                          </div></td>
-                      </tr>
-                      <tr class="clsParrofo"> 
-                        <td bgcolor="#99CCFF"> <div align="left">Tingo </div></td>
-                        <td bgcolor="#99CCFF"> <div align="left">Tingo </div></td>
-                      </tr>
-                      <tr class="clsParrofo"> 
-                        <td bgcolor="#BFEBF9"> <div align="left">Trita </div></td>
-                        <td bgcolor="#BFEBF9"> <div align="left">Trita </div></td>
-                      </tr>
-                    </table>
-                    <p><strong>Ciudades Notables</strong><br>
-                      Luya, ubicada en una campi&ntilde;a pintoresca, Ocall&iacute; 
-                      y Camporredondo, de gran movimiento comercial.</p>
-                  </blockquote></td>
-                <td class="clsParrofo">&nbsp;</td>
-              </tr>
-            </table></td>
-        </tr>
-      </table></td>
-  </tr>
-</table>
+<body>
+    <header>
+        <img src="Imagenes/titulo5.jpg" alt="Título Distritos">
+    </header>
+
+    <main>
+        <nav class="sidebar" aria-label="Lista de distritos">
+            <img src="imagenes/tira1.jpg" alt="Imagen decorativa 1">
+            <img src="imagenes/tira4.jpg" alt="Imagen decorativa 2">
+            <ul>
+                <li><a href="Distritos/lamud.htm">Lamud</a></li>
+                <li><a href="Distritos/camporredondo.htm">Camporredondo</a></li>
+                <li><a href="Distritos/cocabamba.htm">Cocabamba</a></li>
+                <li><a href="Distritos/colcamar.htm">Colcamar</a></li>
+                <li><a href="Distritos/conila.htm">Conila</a></li>
+                <li><a href="Distritos/inguilpata.htm">Inguilpata</a></li>
+                <li><a href="Distritos/longuita.htm">Loénguita</a></li>
+                <li><a href="Distritos/lonyachico.htm">Lonya Chico</a></li>
+                <li><a href="Distritos/luya.htm">Luya</a></li>
+                <li><a href="Distritos/luyaviejo.htm">Luya Viejo</a></li>
+                <li><a href="Distritos/ocalli.htm">Ocalli</a></li>
+                <li><a href="Distritos/ocumal.htm">Ocumal</a></li>
+                <li><a href="Distritos/pisuquia.htm">Pisuquia</a></li>
+                <li><a href="Distritos/maria.htm">María</a></li>
+                <li><a href="Distritos/sancristobal.htm">San Cristóbal</a></li>
+                <li><a href="Distritos/sanfranciscoyeso.htm">San Francisco del Yeso</a></li>
+                <li><a href="Distritos/sanjeronimo.htm">San Jerónimo</a></li>
+                <li><a href="Distritos/sanjeronimo.htm">San Juan de Lopecancha</a></li>
+                <li><a href="Distritos/santacatalina.htm">Santa Catalina</a></li>
+                <li><a href="Distritos/santotomas.htm">Santo Tomás</a></li>
+                <li><a href="Distritos/tingo.htm">Tingo</a></li>
+                <li><a href="Distritos/trita.htm">Trita</a></li>
+            </ul>
+        </nav>
+
+        <section class="content" role="main">
+            <div class="section">
+                <h2 class="section-title">Situación y límites</h2>
+                <p>La Provincia de Luya, nombre que significa "alegría", se halla en la parte meridional del Departamento de Amazonas, abarcando un gran sector de la sierra, detrás de la Cordillera Occidental de los Andes del Perú. Limita por el Norte, con la Provincia de Bagua; por el Este, con el Río Utcubamba, que lo separa de la Provincia de Chachapoyas; por el Sur, con la misma Provincia de Chachapoyas y por el Oeste con el río Marañón, que lo divide de la Provincia de Celendín.</p>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Riquezas naturales</h2>
+                <p>Las producciones del distrito en los tres reinos de la naturaleza son...</p>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Industrias</h2>
+                <p>Las más saltantes son la fabricación de chancaca y aguardiente...</p>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Comercio</h2>
+                <p>La falta de vías de comunicación fáciles y baratas hace difícil las transacciones comerciales...</p>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Vías de comunicación</h2>
+                <p>Casi todos los pueblos tienen servicio de Correos...</p>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Autoridades</h2>
+                <p>Tiene Subprefectura, Juzgados de Instrucción y de Primera Instancia, Agencia Fiscal, Municipalidad, Parroquias...</p>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Instituciones sociales</h2>
+                <p>La Provincia de Luya tiene dos Colegios Secundarios Mixtos...</p>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Población</h2>
+                <p>La siguiente tabla determina el número de personas que habitan en la Provincia de Luya, según el Censo de 1961.</p>
+                <table>
+                    <tr>
+                        <th>Población Escolar en Primaria</th>
+                        <th>Jard.</th>
+                        <th>Trans.</th>
+                        <th>1er Año</th>
+                        <th>2do Año</th>
+                        <th>3er Año</th>
+                        <th>4to Año</th>
+                        <th>5to Año</th>
+                        <th>Total</th>
+                    </tr>
+                    <tr>
+                        <td>36</td>
+                        <td>2436</td>
+                        <td>1453</td>
+                        <td>935</td>
+                        <td>705</td>
+                        <td>463</td>
+                        <td>324</td>
+                        <td>6352</td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <th>Planteles</th>
+                        <th>De Varones</th>
+                        <th>De Mujeres</th>
+                        <th>Mixtos</th>
+                        <th>Total</th>
+                    </tr>
+                    <tr>
+                        <td>27</td>
+                        <td>27</td>
+                        <td>49</td>
+                        <td>103</td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <th>Adultos Matriculados</th>
+                        <th>Varones</th>
+                        <th>Mujeres</th>
+                        <th>Total</th>
+                    </tr>
+                    <tr>
+                        <td>313</td>
+                        <td>763</td>
+                        <td>1076</td>
+                    </tr>
+                </table>
+                  <table>
+                    <tr>
+                        <th>Personal Docente por Categoría</th>
+                        <th>1ra. Cat.</th>
+                        <th>2da. Cat.</th>
+                        <th>3ra. Cat.</th>
+                        <th>Total</th>
+                    </tr>
+                    <tr>
+                        <td>31</td>
+                        <td>20</td>
+                        <td>134</td>
+                        <td>185</td>
+                    </tr>
+                </table>
+            </div>
+            </div>
+            <table>
+                    <tr>
+                        <th>Distritos</th>
+                        <th>Hombres Urbana</th>
+                        <th>Mujeres Urbana</th>
+                        <th>Total Urbana</th>
+                        <th>Hombres Rural</th>
+                        <th>Mujeres Rural</th>
+                        <th>Total Rural</th>
+                        <th>Total General</th>
+                    </tr>
+                    <tr>
+                        <td>Laémud</td>
+                        <td>1106</td>
+                        <td>1402</td>
+                        <td>2508</td>
+                        <td>238</td>
+                        <td>252</td>
+                        <td>490</td>
+                        <td>2998</td>
+                    </tr>
+                    <tr>
+                        <td>Camporredondo</td>
+                        <td>942</td>
+                        <td>715</td>
+                        <td>1657</td>
+                        <td>659</td>
+                        <td>479</td>
+                        <td>1138</td>
+                        <td>2795</td>
+                    </tr>
+                    <tr>
+                        <td>Cocabamba</td>
+                        <td>243</td>
+                        <td>274</td>
+                        <td>517</td>
+                        <td>339</td>
+                        <td>331</td>
+                        <td>670</td>
+                        <td>1187</td>
+                    </tr>
+                    <tr>
+                        <td>Colcamar</td>
+                        <td>441</td>
+                        <td>845</td>
+                        <td>1286</td>
+                        <td>438</td>
+                        <td>518</td>
+                        <td>956</td>
+                        <td>2242</td>
+                    </tr>
+                    <tr>
+                        <td>Conila</td>
+                        <td>445</td>
+                        <td>388</td>
+                        <td>833</td>
+                        <td>282</td>
+                        <td>283</td>
+                        <td>565</td>
+                        <td>1398</td>
+                    </tr>
+                    <tr>
+                        <td>Inguilpata</td>
+                        <td>170</td>
+                        <td>191</td>
+                        <td>361</td>
+                        <td>312</td>
+                        <td>355</td>
+                        <td>667</td>
+                        <td>1028</td>
+                    </tr>
+                    <tr>
+                        <td>Loénguita</td>
+                        <td>33</td>
+                        <td>54</td>
+                        <td>87</td>
+                        <td>254</td>
+                        <td>110</td>
+                        <td>464</td>
+                        <td>551</td>
+                    </tr>
+                    <tr>
+                        <td>Lonya Chico</td>
+                        <td>175</td>
+                        <td>308</td>
+                        <td>483</td>
+                        <td>399</td>
+                        <td>486</td>
+                        <td>885</td>
+                        <td>1368</td>
+                    </tr>
+                    <tr>
+                        <td>Luya</td>
+                        <td>572</td>
+                        <td>754</td>
+                        <td>1326</td>
+                        <td>980</td>
+                        <td>1094</td>
+                        <td>2074</td>
+                        <td>3400</td>
+                    </tr>
+                    <tr>
+                        <td>Luya Viejo</td>
+                        <td>88</td>
+                        <td>139</td>
+                        <td>227</td>
+                        <td>133</td>
+                        <td>95</td>
+                        <td>228</td>
+                        <td>455</td>
+                    </tr>
+                    <tr>
+                        <td>Ocalli</td>
+                        <td>641</td>
+                        <td>597</td>
+                        <td>1234</td>
+                        <td>306</td>
+                        <td>261</td>
+                        <td>567</td>
+                        <td>1805</td>
+                    </tr>
+                    <tr>
+                        <td>Ocumal</td>
+                        <td>599</td>
+                        <td>714</td>
+                        <td>1313</td>
+                        <td>729</td>
+                        <td>715</td>
+                        <td>1444</td>
+                        <td>2757</td>
+                    </tr>
+                    <tr>
+                        <td>Pisuquia</td>
+                        <td>157</td>
+                        <td>139</td>
+                        <td>296</td>
+                        <td>1188</td>
+                        <td>1244</td>
+                        <td>2432</td>
+                        <td>2728</td>
+                    </tr>
+                    <tr>
+                        <td>María</td>
+                        <td>46</td>
+                        <td>50</td>
+                        <td>96</td>
+                        <td>120</td>
+                        <td>181</td>
+                        <td>301</td>
+                        <td>397</td>
+                    </tr>
+                    <tr>
+                        <td>San Cristóbal</td>
+                        <td>298</td>
+                        <td>436</td>
+                        <td>734</td>
+                        <td>75</td>
+                        <td>79</td>
+                        <td>154</td>
+                        <td>888</td>
+                    </tr>
+                    <tr>
+                        <td>S. Fco. Yeso</td>
+                        <td>130</td>
+                        <td>130</td>
+                        <td>260</td>
+                        <td>124</td>
+                        <td>133</td>
+                        <td>257</td>
+                        <td>517</td>
+                    </tr>
+                    <tr>
+                        <td>San Jerónimo</td>
+                        <td>210</td>
+                        <td>244</td>
+                        <td>454</td>
+                        <td>692</td>
+                        <td>749</td>
+                        <td>1441</td>
+                        <td>1895</td>
+                    </tr>
+                    <tr>
+                        <td>S.J. Lopecancha</td>
+                        <td>38</td>
+                        <td>52</td>
+                        <td>90</td>
+                        <td>219</td>
+                        <td>253</td>
+                        <td>472</td>
+                        <td>562</td>
+                    </tr>
+                    <tr>
+                        <td>Santa Catalina</td>
+                        <td>50</td>
+                        <td>110</td>
+                        <td>160</td>
+                        <td>135</td>
+                        <td>265</td>
+                        <td>400</td>
+                        <td>560</td>
+                    </tr>
+                    <tr>
+                        <td>Santo Tomás</td>
+                        <td>176</td>
+                        <td>186</td>
+                        <td>362</td>
+                        <td>1354</td>
+                        <td>1269</td>
+                        <td>2623</td>
+                        <td>2985</td>
+                    </tr>
+                    <tr>
+                        <td>Tingo</td>
+                        <td>182</td>
+                        <td>203</td>
+                        <td>385</td>
+                        <td>307</td>
+                        <td>336</td>
+                        <td>643</td>
+                        <td>1028</td>
+                    </tr>
+                    <tr>
+                        <td>Trita</td>
+                        <td>268</td>
+                        <td>303</td>
+                        <td>571</td>
+                        <td>55</td>
+                        <td>69</td>
+                        <td>124</td>
+                        <td>695</td>
+                    </tr>
+                    <tr>
+                        <td><strong>TOTALES</strong></td>
+                        <td><strong>7010</strong></td>
+                        <td><strong>8234</strong></td>
+                        <td><strong>15244</strong></td>
+                        <td><strong>9339</strong></td>
+                        <td><strong>9657</strong></td>
+                        <td><strong>18995</strong></td>
+                        <td><strong>34239</strong></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="section">
+                <h2 class="section-title">Relatos históricos</h2>
+                <p>Durante el Incanato perteneció al Reino de los Chachapoyas...</p>
+                  <table>
+                    <tr>
+                        <th>Distrito</th>
+                        <th>Capital</th>
+                    </tr>
+                    <tr>
+                        <td>Laémud</td>
+                        <td>Laémud</td>
+                    </tr>
+                    <tr>
+                        <td>Camporredondo</td>
+                        <td>Camporredondo</td>
+                    </tr>
+                    <tr>
+                        <td>Cocabamba</td>
+                        <td>Cocabamba</td>
+                    </tr>
+                    <tr>
+                        <td>Colcamar</td>
+                        <td>Colcamar</td>
+                    </tr>
+                    <tr>
+                        <td>Conila</td>
+                        <td>Cohechán</td>
+                    </tr>
+                    <tr>
+                        <td>Inguilpata</td>
+                        <td>Inguilpata</td>
+                    </tr>
+                    <tr>
+                        <td>Loénguita</td>
+                        <td>Loénguita</td>
+                    </tr>
+                    <tr>
+                        <td>Lonya Chico</td>
+                        <td>Lonya Chico</td>
+                    </tr>
+                    <tr>
+                        <td>Luya</td>
+                        <td>Luya</td>
+                    </tr>
+                    <tr>
+                        <td>Luya Viejo</td>
+                        <td>Luya Viejo</td>
+                    </tr>
+                    <tr>
+                        <td>Ocalli</td>
+                        <td>Ocalli</td>
+                    </tr>
+                    <tr>
+                        <td>Ocumal</td>
+                        <td>Ocumal</td>
+                    </tr>
+                    <tr>
+                        <td>Pisuquia</td>
+                        <td>Yombloén</td>
+                    </tr>
+                    <tr>
+                        <td>María</td>
+                        <td>María</td>
+                    </tr>
+                    <tr>
+                        <td>San Cristóbal</td>
+                        <td>Olto</td>
+                    </tr>
+                    <tr>
+                        <td>S. Fco. Yeso</td>
+                        <td>Yeso</td>
+                    </tr>
+                    <tr>
+                        <td>San Jerónimo</td>
+                        <td>Paclas</td>
+                    </tr>
+                    <tr>
+                        <td>S.J. Lopecancha</td>
+                        <td>Lopecancha</td>
+                    </tr>
+                    <tr>
+                        <td>Santa Catalina</td>
+                        <td>Santa Catalina</td>
+                    </tr>
+                    <tr>
+                        <td>Santo Tomás</td>
+                        <td>Santo Tomás</td>
+                    </tr>
+                    <tr>
+                        <td>Tingo</td>
+                        <td>Tingo</td>
+                    </tr>
+                    <tr>
+                        <td>Trita</td>
+                        <td>Trita</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">División política</h2>
+                <p>La provincia de Luya fue creada por Ley de 5 de febrero de 1861, y en la actualidad cuenta con 22 distritos.</p>
+                <table>
+                  <tr>
+
+                  </tr>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <small>© 2025 Municipalidad Provincial. Todos los derechos reservados.</small>
+    </footer>
 </body>
 </html>
