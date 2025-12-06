@@ -1,83 +1,140 @@
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
-<title>..::..Municipalidad Provincial de Luya..::..</title>
-<script language="JavaScript">
-function FechaActual()
-{
-	var mydate=new Date()
-	var year=mydate.getYear()
-	if (year < 1000)
-		year+=1900
-	var day=mydate.getDay()
-	var month=mydate.getMonth()
-	var daym=mydate.getDate()
-	if (daym<10)
-		daym="0" + daym
-	var dayarray=new Array("Domingo","Lunes","Martes","Miercoles","Jueves","Viernes","Sabado")
-	var montharray=new Array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre")
-	document.write("Luya, " + dayarray[day] + " " + daym + " de " + montharray[month])// + " de " + year
-}
-</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Municipalidad Provincial de Luya - Capital Arqueológica del Nor Oriente Peruano</title>
+    <link href="EstiloLuya.css" rel="stylesheet" type="text/css">
+    <style>
+        body { display: flex; flex-direction: column; }
+    </style>
 </head>
-<link href="EstiloLuya.css" rel="stylesheet" type="text/css">
-<body bgcolor="#AAA9A9" marginheight="0" leftmargin="0" marginwidth="0" rightmargin="0" topmargin="0">
-<table  border="0" width="100%" height="100%" cellpadding="0" cellspacing="0" align="center">
-<tr>
-	<td align="center" width="100%" height="19%" valign="top">
-<table border="0" cellpadding="0" cellspacing="0" width="100%">
-<tr>
-	<td rowspan="2" width="10%" valign="top"><img src="imagenes/img11.jpg"></td>
-	<td height="69" width="490" valign="top">
-		<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
-		  codebase="http://active.macromedia.com/flash4/cabs/swflash.cab#version=4,0,0,0"
-		  id="banner" width="650" height="69">
-		  <param name="movie" value="banner.swf">
-		  <param name="quality" value="high">
-		  <param name="bgcolor" value="#BBBBBB">
-		  <embed name="banner" src="banner.swf" quality="high" bgcolor="#BBBBBB"
-			width="650" height="69"
-			type="application/x-shockwave-flash"
-			pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash">
-		  </embed>
-		</object>
-	</td>
-	<td background="imagenes/img5.jpg">&nbsp;</td>
-</tr>
-<tr>
-	<td colspan="3"><table  border="0" width="100%" cellpadding="0" cellspacing="0">
-		<tr>
-			<td width="160"  height="31" background="imagenes/img3.jpg" valign="middle">&nbsp;&nbsp;&nbsp;&nbsp;<a class="clsLink"  href="presentacion.htm" target="ventana">Presentaci&oacute;n �</a></td>
-			<td align="center" background="imagenes/img4.jpg">
-			<table border="0" cellpadding="0" cellspacing="0" width="80%" height="100%">
-				<tr>
-					<td align="left" valign="middle" width="65%" class="clsMarquesina">&nbsp;<marquee direction="LEFT">Bienvenidos a la Web Oficial de la Municipalidad de Luya....Capital Arqueol&oacute;gica del Nor Oriente Peruano</MARQUEE></td>
-				</tr>
-			</table>
-			</td>					
-		</tr>				
-		</table>	
-	</td>
-</tr>
-<tr>
-	<td colspan="3">	
-	<table border="0" cellpadding="0" cellspacing="0" width="100%">
-		<tr bgcolor="#000000">
-			<td align="left" class="clsParrofo" width="20%">&nbsp;<a href="mapa.htm" class="clsLink" target="ventana">Mapa del Sitio � </a></td>
-			<td align="center"><script src="xaramenu.js"></script><script src="boton.js"></script></td>
-			<td align="right" class="clsFecha"><script>FechaActual()</script>&nbsp;</td>
-	    </tr>
-	</table>
-	</td>
-</tr>
-</table>
-	</td>
-</tr>
-<tr>
-	<td valign="top" width="100%" height="100%">
-	<iframe align="top" frameborder="0" name="ventana" width="100%" height="100%"src="presentacion.htm"></iframe></td>
-	</td>
-</tr>
-</table>
+<body>
+    <!-- Cabecera -->
+    <header class="cabecera">
+        <div class="cabecera__superior">
+            <div class="cabecera__logo">
+                <img src="Imagenes/Img11.jpg" alt="Escudo de Luya" class="cabecera__logo-img">
+                <div>
+                    <h1 class="cabecera__titulo">Municipalidad Provincial de Luya</h1>
+                    <span class="cabecera__subtitulo">Capital Arqueológica del Nor Oriente Peruano</span>
+                </div>
+            </div>
+            <div class="cabecera__fecha" id="fechaActual"></div>
+        </div>
+        <div class="banner-bienvenida">
+            <p class="banner-bienvenida__texto">Bienvenidos a la Web Oficial de la Municipalidad de Luya</p>
+        </div>
+    </header>
 
+    <!-- Navegación -->
+    <nav class="navegacion">
+        <div class="navegacion__contenedor">
+            <button class="navegacion__boton" id="botonNav" aria-label="Menú">
+                <span class="navegacion__boton-icono"></span>
+            </button>
+            <ul class="navegacion__lista" id="listaNav">
+                <li class="navegacion__item">
+                    <a href="presentacion.html" class="navegacion__enlace navegacion__enlace--activo">Presentación</a>
+                </li>
+                <li class="navegacion__item">
+                    <a href="autoridades.htm" class="navegacion__enlace">Autoridades</a>
+                </li>
+                <li class="navegacion__item">
+                    <a href="distritos.htm" class="navegacion__enlace">Distritos</a>
+                    <ul class="navegacion__submenu">
+                        <li><a href="Distritos/lamud.htm" class="navegacion__submenu-enlace">Lamud</a></li>
+                        <li><a href="Distritos/luya.htm" class="navegacion__submenu-enlace">Luya</a></li>
+                        <li><a href="Distritos/tingo.htm" class="navegacion__submenu-enlace">Tingo</a></li>
+                        <li><a href="distritos.htm" class="navegacion__submenu-enlace">Ver todos...</a></li>
+                    </ul>
+                </li>
+                <li class="navegacion__item">
+                    <a href="sitiosturisticos.htm" class="navegacion__enlace">Turismo</a>
+                </li>
+                <li class="navegacion__item">
+                    <a href="obras.html" class="navegacion__enlace">Obras</a>
+                </li>
+                <li class="navegacion__item">
+                    <a href="galeria.htm" class="navegacion__enlace">Galería</a>
+                </li>
+                <li class="navegacion__item">
+                    <a href="transparencia.htm" class="navegacion__enlace">Transparencia</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contenido -->
+    <main class="principal">
+        <section class="presentacion">
+            <aside class="presentacion__lateral">
+                <img src="Imagenes/tira1.jpg" alt="Luya" class="presentacion__lateral-img">
+                <img src="Imagenes/tira2.jpg" alt="Luya" class="presentacion__lateral-img">
+                <img src="Imagenes/tira3.jpg" alt="Luya" class="presentacion__lateral-img">
+            </aside>
+            <article class="presentacion__articulo">
+                <header class="presentacion__encabezado">
+                    <img src="Imagenes/titulo.jpg" alt="Municipalidad Provincial de Luya" class="presentacion__titulo-img">
+                </header>
+                <p class="presentacion__texto">
+                    La Provincia de Luya, nombre que significa <strong>"alegría"</strong>, se halla en la parte
+                    meridional del Departamento de Amazonas, abarcando un gran sector de la sierra, detrás de
+                    la Cordillera Occidental de los Andes del Perú.
+                </p>
+                <p class="presentacion__texto">
+                    Limita por el Norte con la Provincia de Bagua; por el Este con el Río Utcubamba;
+                    por el Sur con la Provincia de Chachapoyas; y por el Oeste con el río Marañón.
+                </p>
+                <p class="presentacion__texto">
+                    Está bañada por dos caudalosos ríos: el Marañón y el Utcubamba, que fertilizan los valles
+                    de Tupén, Mendén, Quisquis, Soscémal, Hóndul, Lopecancha y otros.
+                </p>
+                <p class="presentacion__texto">
+                    Tiene la maravilla de poseer todos los climas del mundo, desde los más fríos hasta los
+                    más calientes de las profundas quebradas.
+                </p>
+            </article>
+        </section>
+    </main>
+
+    <!-- Pie de Página -->
+    <footer class="pie-pagina">
+        <div class="pie-pagina__contenedor">
+            <h2 class="pie-pagina__titulo">Enlaces de Interés</h2>
+            <div class="pie-pagina__enlaces">
+                <a href="https://www.gob.pe" target="_blank" class="pie-pagina__enlace">
+                    <img src="Imagenes/perugobierno.gif" alt="Portal del Estado" class="pie-pagina__enlace-img">
+                </a>
+                <a href="https://www.mef.gob.pe" target="_blank" class="pie-pagina__enlace">
+                    <img src="Imagenes/b_mef.gif" alt="MEF" class="pie-pagina__enlace-img">
+                </a>
+                <a href="https://www.acuerdonacional.pe" target="_blank" class="pie-pagina__enlace">
+                    <img src="Imagenes/acuerdonac.jpg" alt="Acuerdo Nacional" class="pie-pagina__enlace-img">
+                </a>
+            </div>
+            <div class="pie-pagina__inferior">
+                <p class="pie-pagina__copyright">© 2024 Municipalidad Provincial de Luya - Amazonas, Perú</p>
+                <a href="mapa.html" class="pie-pagina__mapa-enlace">Mapa del Sitio</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Fecha
+        (function() {
+            const dias = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
+            const meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio',
+                          'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+            const f = new Date();
+            document.getElementById('fechaActual').textContent =
+                dias[f.getDay()] + ', ' + f.getDate() + ' de ' + meses[f.getMonth()] + ' de ' + f.getFullYear();
+        })();
+
+        // Menú móvil
+        document.getElementById('botonNav').addEventListener('click', function() {
+            document.getElementById('listaNav').classList.toggle('activo');
+        });
+    </script>
 </body>
 </html>

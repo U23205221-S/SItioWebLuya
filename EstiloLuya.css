@@ -1,166 +1,682 @@
-BODY
-{
- SCROLLBAR-FACE-COLOR: #AAA9A9; 
- SCROLLBAR-HIGHLIGHT-COLOR: #FFFFFF; 
- SCROLLBAR-SHADOW-COLOR: #000000; 
- SCROLLBAR-3DLIGHT-COLOR: #AAA9A9; 
- SCROLLBAR-ARROW-COLOR: #FFFFFF; 
- SCROLLBAR-TRACK-COLOR: #CCCCCC;
-}
-.clsFecha
-{
-	FONT-WEIGHT: bold; 
-	FONT-SIZE: 7pt;
-	COLOR:#FFFFFF;
-	FONT-FAMILY:VERDANA
+/* ============================================
+   EstiloLuya.css - Estilos del Sitio Web
+   Municipalidad Provincial de Luya
+   ============================================ */
+
+/* ===== Reinicio y Base ===== */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-.clsMarquesina
-{
-    FONT-SIZE: 8pt;
-	FONT-WEIGHT: bold; 	
-    COLOR: #000000;
-    FONT-FAMILY: Verdana
-}
-.clsParrofo
-{
-    FONT-SIZE: 8pt;
-    COLOR: #000000;
-    FONT-FAMILY: Verdana
-}
-.clsLink 
-{
-	FONT-SIZE: 7pt; 
-	FONT-WEIGHT: bold; 
-	COLOR:#ffcc33;
-	FONT-FAMILY: VERDANA; 
-	TEXT-DECORATION: NONE
-}
-.clsLink:visited
-{
-	FONT-SIZE: 7pt; 
-	FONT-WEIGHT: bold; 
-	COLOR:#ffcc33;
-	FONT-FAMILY: Verdana; 
-	TEXT-DECORATION: NONE
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
 }
 
-.clsLink:hover
-{
-	FONT-SIZE: 7pt; 
-	COLOR:#ffcc33;
-	FONT-WEIGHT: bold; 
-	FONT-FAMILY: Verdana; 
-	TEXT-DECORATION: UNDERLINE
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
-.clsLink1 
-{
-	FONT-SIZE: 7pt; 
-	FONT-WEIGHT: bold; 
-	COLOR:#009900;
-	FONT-FAMILY: VERDANA; 
-	TEXT-DECORATION: NONE
-}
-.clsLink1:visited
-{
-	FONT-SIZE: 7pt; 
-	FONT-WEIGHT: bold; 
-	COLOR:#009900;
-	FONT-FAMILY: Verdana; 
-	TEXT-DECORATION: NONE
-}
-.clsLink1:hover
-{
-	FONT-SIZE: 7pt; 
-	COLOR:#009900;
-	FONT-WEIGHT: bold; 
-	FONT-FAMILY: Verdana; 
-	TEXT-DECORATION: UNDERLINE
+a {
+    color: #990000;
+    text-decoration: none;
 }
 
-.clsLink2 
-{
-	FONT-SIZE: 8pt; 
-	FONT-WEIGHT: bold; 
-	COLOR:#993300;
-	FONT-FAMILY: VERDANA; 
-	TEXT-DECORATION: UNDERLINE
-}
-.clsLink2:visited
-{
-	FONT-SIZE: 8pt; 
-	FONT-WEIGHT: bold; 
-	COLOR:#993300;
-	FONT-FAMILY: Verdana; 
-	TEXT-DECORATION: UNDERLINE
-}
-.clsLink2:hover
-{
-	FONT-SIZE:8pt; 
-	COLOR:#993300;
-	FONT-WEIGHT: bold; 
-	FONT-FAMILY: Verdana; 
-	TEXT-DECORATION: UNDERLINE
+a:hover {
+    text-decoration: underline;
 }
 
-.clsContenido
-{
-    FONT-SIZE: 8pt;
-    COLOR: #000000;
-    FONT-FAMILY: Verdana
+ul {
+    list-style: none;
 }
 
-.clsTitulo
-{
-	FONT-SIZE: 9pt; 
-	FONT-WEIGHT: bold; 
-	COLOR:#993300;
-	FONT-FAMILY: VERDANA; 
-}
-.clsTitulo1
-{
-	FONT-SIZE: 9pt; 
-	FONT-WEIGHT: bold; 
-	COLOR:#000000;
-	FONT-FAMILY: VERDANA; 
+/* ===== Cabecera ===== */
+.cabecera {
+    background-color: #990000;
+    color: #fff;
+    padding: 1rem;
 }
 
-.clsSubtitulo
-{
-	FONT-SIZE: 8pt; 
-	FONT-WEIGHT: bold; 
-	COLOR:#0066CC;
-	FONT-FAMILY: VERDANA; 
+.cabecera__superior {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 0.5rem;
 }
 
-.clsCelda
-{
-	FONT-SIZE: 8pt; 
-	FONT-WEIGHT: bold; 
-	COLOR:#FFFFFF;
-	FONT-FAMILY: VERDANA; 
-	background-color: #336699;
-}
-.clsCeldaContenido
-{
-	FONT-SIZE: 7pt; 
-	FONT-WEIGHT:500; 
-	COLOR:#000000;
-	FONT-FAMILY: VERDANA; 
+.cabecera__logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
-.clsCeldaOn
-{
-	FONT-SIZE:8pt;
-	COLOR:#FFFFFF;
-	FONT-FAMILY:VERDANA;
-	BACKGROUND-COLOR: #006600;	
+.cabecera__logo-img {
+    max-height: 50px;
 }
-.clsCeldaOff
-{
-	FONT-SIZE:8pt;
-	COLOR:#FFFFFF;
-	FONT-FAMILY:VERDANA;
-	BACKGROUND-COLOR: #009900;	
+
+.cabecera__titulo {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #fff;
 }
+
+.cabecera__subtitulo {
+    font-size: 0.8rem;
+    color: #ffcc33;
+}
+
+.cabecera__fecha {
+    font-size: 0.75rem;
+    color: #ffcc33;
+}
+
+.cabecera__nav {
+    display: flex;
+    gap: 1.5rem;
+    padding: 0.5rem;
+}
+
+.cabecera__nav a {
+    color: #ffcc33;
+    font-size: 0.85rem;
+}
+
+.cabecera__nav a:hover {
+    color: #fff;
+}
+
+/* ===== Banner de Bienvenida ===== */
+.banner-bienvenida {
+    background-color: #660000;
+    padding: 0.5rem 1rem;
+    text-align: center;
+}
+
+.banner-bienvenida__texto {
+    font-size: 0.9rem;
+    color: #fff;
+}
+
+/* ===== Navegación ===== */
+.navegacion {
+    background-color: #333;
+    padding: 0;
+}
+
+.navegacion__contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.navegacion__lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.navegacion__item {
+    position: relative;
+}
+
+.navegacion__enlace {
+    display: block;
+    padding: 0.75rem 1rem;
+    color: #fff;
+    font-size: 0.85rem;
+    text-decoration: none;
+}
+
+.navegacion__enlace:hover,
+.navegacion__enlace--activo {
+    background-color: #990000;
+    text-decoration: none;
+}
+
+/* Submenú desplegable */
+.navegacion__submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 180px;
+    background-color: #444;
+    z-index: 100;
+}
+
+.navegacion__item:hover .navegacion__submenu {
+    display: block;
+}
+
+.navegacion__submenu-enlace {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #ccc;
+    font-size: 0.8rem;
+    text-decoration: none;
+}
+
+.navegacion__submenu-enlace:hover {
+    background-color: #990000;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Botón menú móvil */
+.navegacion__boton {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    padding: 0.75rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.navegacion__boton-icono {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: #fff;
+    position: relative;
+}
+
+.navegacion__boton-icono::before,
+.navegacion__boton-icono::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background-color: #fff;
+}
+
+.navegacion__boton-icono::before { top: -6px; }
+.navegacion__boton-icono::after { top: 6px; }
+
+/* ===== Estructura Principal ===== */
+.contenedor-pagina {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    min-height: 70vh;
+}
+
+/* ===== Contenido Principal ===== */
+.principal {
+    flex: 1;
+    padding: 1.5rem;
+}
+
+.principal__titulo {
+    color: #006600;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #006600;
+}
+
+.principal__mensaje {
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+.principal__icono {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+/* ===== Barra Lateral ===== */
+.barra-lateral {
+    flex: 0 0 180px;
+    background-color: #990000;
+    padding: 1rem;
+}
+
+.barra-lateral__imagen {
+    width: 100%;
+    margin-bottom: 0.5rem;
+    border-radius: 4px;
+}
+
+/* ===== Presentación ===== */
+.presentacion {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.presentacion__lateral {
+    flex: 0 0 120px;
+}
+
+.presentacion__lateral-img {
+    width: 100%;
+    margin-bottom: 0.5rem;
+    border-radius: 4px;
+}
+
+.presentacion__articulo {
+    flex: 1;
+}
+
+.presentacion__encabezado {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.presentacion__titulo-img {
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.presentacion__texto {
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+/* ===== Secciones ===== */
+.seccion {
+    margin-bottom: 1.5rem;
+}
+
+.seccion__titulo {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 0.75rem;
+    padding: 0.5rem;
+    background-color: #f5f5f5;
+    border-left: 3px solid #990000;
+}
+
+.seccion__lista li {
+    margin-bottom: 0.5rem;
+    padding-left: 1rem;
+}
+
+.seccion__lista li::before {
+    content: "• ";
+    color: #990000;
+}
+
+/* ===== Atracciones Turísticas ===== */
+.atraccion {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.atraccion:last-child {
+    border-bottom: none;
+}
+
+.atraccion__titulo {
+    color: #006600;
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+    border-bottom: 2px solid #006600;
+    padding-bottom: 0.25rem;
+}
+
+.atraccion__descripcion {
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+.atraccion__galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.atraccion__galeria-item {
+    text-align: center;
+}
+
+.atraccion__galeria-item img {
+    width: 100px;
+    height: 70px;
+    object-fit: cover;
+    border: 1px solid #ddd;
+}
+
+.atraccion__galeria-item span {
+    display: block;
+    font-size: 0.7rem;
+    color: #666;
+    margin-top: 0.25rem;
+}
+
+/* ===== Galería de Imágenes ===== */
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.galeria img {
+    width: 120px;
+    height: auto;
+    border: 1px solid #ddd;
+}
+
+/* ===== Mapa del Sitio ===== */
+.mapa-sitio {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.mapa-sitio__seccion {
+    flex: 1 1 250px;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-left: 3px solid #990000;
+}
+
+.mapa-sitio__titulo {
+    font-size: 1rem;
+    color: #990000;
+    margin-bottom: 0.75rem;
+    font-weight: bold;
+}
+
+.mapa-sitio__lista li {
+    margin-bottom: 0.4rem;
+    padding-left: 0.75rem;
+}
+
+/* ===== Página de Entrada ===== */
+.entrada {
+    text-align: center;
+    max-width: 500px;
+}
+
+.entrada__logo {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 1.5rem;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+.entrada__logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.entrada__titulo {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.entrada__subtitulo {
+    font-size: 1rem;
+    color: #ffcc33;
+    margin-bottom: 0.75rem;
+}
+
+.entrada__lema {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 2rem;
+}
+
+.entrada__boton {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    background-color: #ffcc33;
+    color: #990000;
+    font-weight: bold;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.entrada__boton:hover {
+    background-color: #fff;
+    text-decoration: none;
+}
+
+/* ===== Pie de Página ===== */
+.pie-pagina {
+    background-color: #333;
+    color: #ccc;
+    padding: 1.5rem 1rem;
+    margin-top: auto;
+}
+
+.pie-pagina__contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.pie-pagina__titulo {
+    font-size: 0.85rem;
+    color: #ffcc33;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.pie-pagina__enlaces {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.pie-pagina__enlace {
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.pie-pagina__enlace:hover {
+    text-decoration: none;
+}
+
+.pie-pagina__enlace-img {
+    max-width: 70px;
+    max-height: 35px;
+    object-fit: contain;
+}
+
+.pie-pagina__enlace-texto {
+    font-size: 0.65rem;
+    color: #999;
+    display: block;
+    margin-top: 0.25rem;
+}
+
+.pie-pagina__inferior {
+    text-align: center;
+    padding-top: 1rem;
+    border-top: 1px solid #555;
+}
+
+.pie-pagina__copyright {
+    font-size: 0.75rem;
+    color: #888;
+}
+
+.pie-pagina__mapa-enlace {
+    color: #ffcc33;
+    font-size: 0.8rem;
+}
+
+/* ===== Botones ===== */
+.boton {
+    display: inline-block;
+    padding: 0.6rem 1.5rem;
+    background-color: #990000;
+    color: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.boton:hover {
+    background-color: #cc0000;
+    text-decoration: none;
+}
+
+/* ===== Tablas ===== */
+.tabla {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0.75rem;
+}
+
+.tabla th,
+.tabla td {
+    padding: 0.5rem;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+.tabla th {
+    background-color: #f0f0f0;
+}
+
+/* ============================================
+   DISEÑO RESPONSIVO
+   ============================================ */
+
+/* Tabletas y pantallas medianas */
+@media (max-width: 992px) {
+    .contenedor-pagina {
+        flex-direction: column;
+    }
+
+    .barra-lateral {
+        flex: 0 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .barra-lateral__imagen {
+        max-width: 80px;
+    }
+
+    .presentacion {
+        flex-direction: column;
+    }
+
+    .presentacion__lateral {
+        flex: 0 0 auto;
+        display: flex;
+        gap: 0.5rem;
+        justify-content: center;
+    }
+
+    .presentacion__lateral-img {
+        max-width: 80px;
+    }
+}
+
+/* Teléfonos móviles */
+@media (max-width: 768px) {
+    .navegacion__boton {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .navegacion__lista {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navegacion__lista.activo {
+        display: flex;
+    }
+
+    .navegacion__enlace {
+        border-bottom: 1px solid #444;
+    }
+
+    .navegacion__submenu {
+        position: static;
+        background-color: #555;
+    }
+
+    .navegacion__item:hover .navegacion__submenu {
+        display: block;
+    }
+
+    .cabecera__superior {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cabecera__logo {
+        flex-direction: column;
+    }
+
+    .principal {
+        padding: 1rem;
+    }
+
+    .principal__titulo {
+        font-size: 1.3rem;
+    }
+
+    .atraccion__galeria-item img {
+        width: 80px;
+        height: 55px;
+    }
+
+    .mapa-sitio {
+        flex-direction: column;
+    }
+}
+
+/* Teléfonos pequeños */
+@media (max-width: 480px) {
+    .cabecera__titulo {
+        font-size: 1.1rem;
+    }
+
+    .principal {
+        padding: 0.75rem;
+    }
+
+    .presentacion__texto {
+        text-align: left;
+        font-size: 0.9rem;
+    }
+
+    .atraccion__descripcion {
+        text-align: left;
+        font-size: 0.9rem;
+    }
+
+    .entrada__titulo {
+        font-size: 1.5rem;
+    }
+
+    .entrada__logo {
+        width: 100px;
+        height: 100px;
+    }
+
+    .galeria img {
+        width: 100px;
+    }
+
+    .pie-pagina__enlace-texto {
+        display: none;
+    }
+}
+

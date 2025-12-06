@@ -1,26 +1,38 @@
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
-<title>..::..Portal Virtual de la Municipalidad de Luya..::..</title></head>
-<link href="EstiloLuya.css" rel="stylesheet" type="text/css">
-<body bgcolor="#C1C1C0" marginheight="0" leftmargin="0" marginwidth="0" rightmargin="0" topmargin="0">
-<table align="center" width="100%" height="100%" cellpadding="0" cellspacing="0">
-	<tr valign="middle">
-		<td align="center">
-			<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
-			  codebase="http://active.macromedia.com/flash4/cabs/swflash.cab#version=4,0,0,0"
-			  id="intro" width="570" height="330">
-			  <param name="movie" value="intro.swf">
-			  <param name="quality" value="high">
-			  <param name="bgcolor" value="#C1C1C0">
-			  <embed name="intro" src="intro.swf" quality="high" bgcolor="#C1C1C0"
-				width="570" height="330"
-				type="application/x-shockwave-flash"
-				pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash">
-			  </embed>
-			</object>
-		</td>
-	</tr>
-</table>
-</center>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Virtual de la Municipalidad de Luya - Perú</title>
+    <link href="EstiloLuya.css" rel="stylesheet" type="text/css">
+    <style>
+        body {
+            background-color: #990000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 1rem;
+        }
+        .entrada__pie {
+            margin-top: 2rem;
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+    </style>
+</head>
+<body>
+    <main class="entrada">
+        <div class="entrada__logo">
+            <img src="Luya.jpg" alt="Escudo de Luya">
+        </div>
+        <h1 class="entrada__titulo">Municipalidad Provincial de Luya</h1>
+        <p class="entrada__subtitulo">Capital Arqueológica del Nor Oriente Peruano</p>
+        <p class="entrada__lema">Gestión Municipal al servicio de la Comunidad</p>
+        <a href="principal.html" class="entrada__boton">Ingresar al Portal</a>
+        <footer class="entrada__pie">
+            <p>Amazonas, Perú</p>
+        </footer>
+    </main>
 </body>
 </html>
