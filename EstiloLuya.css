@@ -1,9 +1,4 @@
-/* ============================================
-   EstiloLuya.css - Estilos del Sitio Web
-   Municipalidad Provincial de Luya
-   ============================================ */
 
-/* ===== Reinicio y Base ===== */
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
